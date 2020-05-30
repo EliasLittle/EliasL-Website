@@ -30,13 +30,15 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/showdown'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
+    //'@nuxtjs/eslint-module',
     '@nuxtjs/vuetify'
   ],
   /*
@@ -45,7 +47,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxt/content'
+    '@nuxt/content',
+    //'@nuxtjs/markdownit'
   ],
   /*
    ** Axios module configuration
@@ -56,7 +59,29 @@ export default {
   ** Nuxt content module configuration
   ** See https://content.nuxtjs.org/
   */
-  content: {},
+  content: {
+    markdown: {
+      externalLinks: {},
+      basePlugins: ['remark-squeeze-paragraphs', 'remark-slug', 'remark-autolink-headings', 'remark-external-links', 'remark-footnotes'],
+      plugins: ['remark-squeeze-paragraphs', 'remark-slug', 'remark-autolink-headings', 'remark-external-links', 'remark-footnotes','remark-emoji','remark-highlight.js'],
+      prism: {
+        theme: 'node_modules/prismjs/themes/prism-material-light.css'
+      }
+    }
+  },
+  /*
+  ** [optional] markdownit options
+  ** See https://github.com/markdown-it/markdown-it
+  */
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      'markdown-it-div',
+      'markdown-it-attrs'
+    ]
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -64,7 +89,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -74,6 +99,15 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
+        },
+        light: {
+            primary: '#1976D2',
+            secondary: '#424242',
+            accent: '#82B1FF',
+            error: '#FF5252',
+            info: '#2196F3',
+            success: '#4CAF50',
+            warning: '#FFC107',
         }
       }
     }
