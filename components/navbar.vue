@@ -1,20 +1,13 @@
 <template>
   <v-app-bar tile >
-    Elias
+    <v-toolbar-title><nuxt-link class="black--text headline" to="/">Elias</nuxt-link></v-toolbar-title>
+    
+    <v-spacer></v-spacer>
+
+    <v-btn text> About</v-btn>
+    <v-btn text><nuxt-link class="black--text" to="/portfolio">Portfolio</nuxt-link></v-btn>
+    <v-btn text><nuxt-link class="black--text" to="/blog">Blog</nuxt-link></v-btn>
   </v-app-bar>
-  <!--
-  <v-navbar class="header" toggleable="sm" type="dark" variant="dark" >
-  <v-navbar-brand href="#">Ælias</v-navbar-brand>
-
-  <v-navbar-toggle target="nav-collapse"></v-navbar-toggle>
-
-  <v-collapse id="nav-collapse" is-nav>
-      <v-navbar-nav class="ml-auto" >
-          <v-nav-item href="#About" >About</v-nav-item>
-          <v-nav-item href="#Porfolio" >Portfolio</v-nav-item>
-          <v-nav-item href="#Blog">Blog</v-nav-item>
-      </v-navbar-nav>
-  </v-collapse></v-navbar>-->
 </template>
 <script>
 export default {

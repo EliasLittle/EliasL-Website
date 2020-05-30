@@ -4,14 +4,14 @@
 
 <script>
 import VueShowdown from "vue-showdown";
-import MarkDownData from "!raw-loader!../assets/AboutMe";
+import MarkDownData from "~/content/AboutMe.txt";
 
 export default {
   name: "App",
   props: {
     file: String
   },
-  components: VueShowdown,
+  components: [VueShowdown],
   data: function() {
     return {
       fileContent: null,

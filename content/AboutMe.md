@@ -1,4 +1,4 @@
-`Hello World`, I'm Elias. I'm currently a rising Sophmore at Cornell University :herb:I am planning on majoring in Operations Research with a double minor in Math and CS (with possibly a third in Physics time permitting). I am on the Propulsion Team for [Cornell Hyperloop](https://hyperloop.cornell.edu/) :bullettrain_side:, I play Cello :violin: for [Anything Goes](https://www.cuanythinggoes.net/), and help around at [Torzal Guitars](https://www.torzalguitars.com "Torzal Homepage") :guitar: as I can. 
+<code class="red--text elevation-0">Hello World</code>, I'm Elias. I'm currently a rising Sophmore at Cornell University :herb:I am planning on majoring in Operations Research with a double minor in Math and CS (with possibly a third in Physics time permitting). I am on the Propulsion Team for [Cornell Hyperloop](https://hyperloop.cornell.edu/) :bullettrain_side:, I play Cello :violin: for [Anything Goes](https://www.cuanythinggoes.net/), and help around at [Torzal Guitars](https://www.torzalguitars.com "Torzal Homepage") :guitar: as I can. 
 
 Born in California and raised in Texas, only one thing is certain. I am liberal with my servings of BBQ.
 
