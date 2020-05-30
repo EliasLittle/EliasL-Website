@@ -56,7 +56,33 @@ export default {
   ** Nuxt content module configuration
   ** See https://content.nuxtjs.org/
   */
+<<<<<<< Updated upstream
   content: {},
+=======
+  content: {
+    markdown: {
+      externalLinks: {},
+      basePlugins: ['remark-squeeze-paragraphs', 'remark-slug', 'remark-autolink-headings', 'remark-external-links', 'remark-footnotes'],
+      plugins: ['remark-squeeze-paragraphs', 'remark-slug', 'remark-autolink-headings', 'remark-external-links', 'remark-footnotes','remark-emoji','remark-highlight.js'],
+      prism: {
+        theme: 'prismjs/themes/prism.css'
+      }
+    }
+  },
+  /*
+  ** [optional] markdownit options
+  ** See https://github.com/markdown-it/markdown-it
+  */
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      'markdown-it-div',
+      'markdown-it-attrs'
+    ]
+  },
+>>>>>>> Stashed changes
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
