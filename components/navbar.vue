@@ -4,7 +4,7 @@
     
     <v-spacer></v-spacer>
 
-    <v-btn text> About</v-btn>
+    <v-btn text> Groups</v-btn>
     <v-btn text><nuxt-link class="black--text" to="/portfolio">Portfolio</nuxt-link></v-btn>
     <v-btn text><nuxt-link class="black--text" to="/blog">Blog</nuxt-link></v-btn>
   </v-app-bar>
