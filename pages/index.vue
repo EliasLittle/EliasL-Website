@@ -32,29 +32,80 @@
         <v-divider></v-divider>
 
         <v-row>
+            <!-- Albums Card -->
             <v-col sm="12" lg="4">
                 <v-card outlined class="mx-auto">
+
                     <v-list-item-content class="mx-2">
                         <div class="overline mb-4">Ears</div>
-                        <v-list-item-title class="headline mb-1">Some Music</v-list-item-title>
-                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+                        <v-list-item-title class="headline mb-1">Music</v-list-item-title>
+                        <v-list-item-subtitle>Some of my favorite albums</v-list-item-subtitle>
                     </v-list-item-content>
+
+                    
+                    <v-list two-line shaped>
+
+                        <v-list-group 
+                         v-for="album in AlbumList" 
+                         :key="album.title"
+                         multiple 
+                         no-action
+                         active-class="blue--text">
+                            <template v-slot:activator>
+                                <v-list-item>
+                                    <v-list-item-content>
+                                        <v-list-item-title>{{album.title}}</v-list-item-title>
+                                        <v-list-item-subtitle>{{album.artist}}</v-list-item-subtitle>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </template>
+                            <v-list-item>
+                                <v-list-item-content>
+                                    <iframe :src="album.embed" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list-group>
+
+                    </v-list>
+
                 </v-card>
             </v-col>
 
+            <!-- Books Card -->
             <v-col sm="12" lg="4">
                 <v-card outlined class="mx-auto">
                     <v-list-item-content class="mx-2">
                         <div class="overline mb-4">Eyes</div>
                         <v-list-item-title class="headline mb-1">Reading List</v-list-item-title>
-                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+                        <v-list-item-subtitle>Books I'm currently reading or have recently read</v-list-item-subtitle>
                     </v-list-item-content>
 
-                    <v-list shaped>
-                        <v-list-item-group v-model="item" color="primary">
-                            <v-list-item>Territory of Light</v-list-item>
-                        </v-list-item-group>
+                    <v-list two-line shaped>
+
+                        <v-list-group 
+                         v-for="book in BookList" 
+                         :key="book.title"
+                         multiple 
+                         no-action
+                         active-class="blue--text">
+                            <template v-slot:activator>
+                                <v-list-item>
+                                    <v-list-item-content>
+                                        <v-list-item-title>{{book.title}}</v-list-item-title>
+                                        <v-list-item-subtitle class="text--primary">{{book.subtitle}}</v-list-item-subtitle>
+                                        <v-list-item-subtitle>{{book.author}}</v-list-item-subtitle>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </template>
+                            <v-list-item>
+                                <v-list-item-content>
+                                    <a target="_blank"  :href="book.urlone"><img border="0" :src="book.urltwo" ></a><img src="book.urlthree" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list-group>
+
                     </v-list>
+
                 </v-card>
             </v-col>
 
@@ -68,6 +119,9 @@
                 </v-card>
             </v-col>
         </v-row>
+
+        <v-spacer></v-spacer>
+        
     </div>
 
   </div>
@@ -75,10 +129,19 @@
 
 <script>
 import navbar from '~/components/navbar.vue';
+import albumlist from '~/assets/json/albums.json';
+import booklist from '~/assets/json/books.json';
+
 
 export default {
+    data () {
+        return {
+            AlbumList: albumlist,
+            BookList: booklist
+        }
+    },
     components: {
-      navbar,
+      navbar
     },
     async asyncData({$content}) {
         const aboutMe = await $content('AboutMe').fetch();
@@ -90,4 +153,5 @@ export default {
       }
     }
 }
+
 </script>

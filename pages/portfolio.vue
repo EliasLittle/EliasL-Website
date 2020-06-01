@@ -14,6 +14,7 @@
                 </v-col>
             </v-row>
         </v-parallax>
+        <v-divider></v-divider>
     </div>
 </template>
 
@@ -22,7 +23,8 @@ import navbar from '~/components/navbar.vue';
 
 export default {
     components: {
-      navbar
+      navbar,
+      album
     }
 }
 </script>
