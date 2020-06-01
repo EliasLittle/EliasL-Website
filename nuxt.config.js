@@ -30,9 +30,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~/plugins/showdown'
-  ],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -65,7 +63,7 @@ export default {
       basePlugins: ['remark-squeeze-paragraphs', 'remark-slug', 'remark-autolink-headings', 'remark-external-links', 'remark-footnotes'],
       plugins: ['remark-squeeze-paragraphs', 'remark-slug', 'remark-autolink-headings', 'remark-external-links', 'remark-footnotes','remark-emoji','remark-highlight.js'],
       prism: {
-        theme: 'node_modules/prismjs/themes/prism-material-light.css'
+        theme: 'prismjs/themes/prism.css'
       }
     }
   },
