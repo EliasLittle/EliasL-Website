@@ -21,7 +21,6 @@
             <v-row >
                 <v-col v-for="(proj,i) in Projects" :key="i" cols="12" >
                     <v-lazy
-                        v-model="isActive"
                         :options="{
                         threshold: .5
                         }"

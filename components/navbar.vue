@@ -1,12 +1,16 @@
 <template>
   <v-app-bar tile >
-    <v-toolbar-title><nuxt-link class="black--text headline" to="/">About</nuxt-link></v-toolbar-title>
+    <v-toolbar-title>Elias</v-toolbar-title>
+    <v-divider inset vertical class="ml-4 mr-2"></v-divider>
+    <v-btn text to="/" class="font-weight-light" nuxt>About Me</v-btn>
     
     <v-spacer></v-spacer>
 
-    <v-btn text><nuxt-link class="black--text" to="/involvements">Involvements</nuxt-link></v-btn>
-    <v-btn text><nuxt-link class="black--text" to="/portfolio">Portfolio</nuxt-link></v-btn>
-    <v-btn text><nuxt-link class="black--text" to="/Ælias">Ælias</nuxt-link></v-btn>
+    <v-btn text to="/involvements" class="font-weight-light" nuxt>Involvements</v-btn>
+    <v-divider inset vertical class="mx-2"></v-divider>
+    <v-btn text to="/portfolio" class="font-weight-light" nuxt>Portfolio</v-btn>
+    <v-divider inset vertical class="mx-2"></v-divider>
+    <v-btn text to="/blog" class="font-weight-light" nuxt>Stochastic Theories</v-btn>
   </v-app-bar>
 </template>
 <script>
