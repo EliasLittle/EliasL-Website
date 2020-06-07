@@ -13,17 +13,19 @@
         </div>
     </v-parallax>
 
+    <v-sheet height="50"></v-sheet>
+
     <div class="mx-10 mb-12">
         <v-row>
             
-            <v-col sm="12" lg="3">
-                <v-container class=".d-md-none .d-lg-flex">
+            <v-col xs="0" lg="3" class="d-none d-lg-flex">
+                <v-container>
                     <v-img src="img/eliasHeadshot.jpg"/>
                 </v-container>
             </v-col>
             
 
-            <v-col sm="12" lg="9">
+            <v-col xs="12" sm="12" lg="9">
                 <v-container>
                     <nuxt-content :document="aboutMe" />
                 </v-container>
@@ -93,14 +95,23 @@
                                 <v-list-item>
                                     <v-list-item-content>
                                         <v-list-item-title>{{book.title}}</v-list-item-title>
-                                        <v-list-item-subtitle class="text--primary">{{book.subtitle}}</v-list-item-subtitle>
-                                        <v-list-item-subtitle>{{book.author}}</v-list-item-subtitle>
+                                        <v-list-item-subtitle class="text--primary d-none d-md-flex d-lg-none">{{book.subtitle}}</v-list-item-subtitle>
+                                        <v-list-item-subtitle >{{book.author}}</v-list-item-subtitle>
                                     </v-list-item-content>
                                 </v-list-item>
                             </template>
                             <v-list-item>
                                 <v-list-item-content>
-                                    <a target="_blank"  :href="book.urlone"><img border="0" :src="book.urltwo" ></a><img src="book.urlthree" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                                    <v-row>
+                                        <v-col sm="3" lg="6" class="mx-2">
+                                            <a target="_blank" :href="book.urlone"><img border="0" :src="book.urltwo" ></a><img src="book.urlthree" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                                        </v-col>
+                                        <!-- Future addition: Review link
+                                        <v-col sm="8" md="4" lg="6" class="mx-2">
+                                            <v-sheet color="blue lighten-3" height="250" class="float-right d-lg-flex">{{book.review}}</v-sheet>
+                                        </v-col>
+                                        -->
+                                    </v-row>
                                 </v-list-item-content>
                             </v-list-item>
                         </v-list-group>
@@ -110,6 +121,7 @@
                 </v-card>
             </v-col>
 
+            <!-- Thoughts Card -->
             <v-col sm="12" lg="4">
                 <v-card outlined class="mx-auto">
                     <v-list-item-content class="mx-2">
