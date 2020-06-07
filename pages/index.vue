@@ -121,8 +121,7 @@
             </v-col>
         </v-row>
 
-        <v-spacer></v-spacer>
-        
+        <v-sheet class="d-flex" height="120"></v-sheet>
     </div>
 
   </div>
@@ -147,11 +146,6 @@ export default {
     async asyncData({$content}) {
         const aboutMe = await $content('AboutMe').fetch();
         return {aboutMe};
-    },
-    computed: {
-      aboutme() {
-        return aboutme
-      }
     }
 }
 
