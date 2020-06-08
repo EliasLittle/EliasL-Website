@@ -32,11 +32,9 @@
             </v-col>
         </v-row>
 
-        <v-divider></v-divider>
-
-        <v-row>
+        <v-row style="background:#F5F5F5" class="mx-n10">
             <!-- Albums Card -->
-            <v-col sm="12" lg="4">
+            <v-col sm="12" lg="4" class="ml-2">
                 <v-card outlined class="mx-auto">
 
                     <v-list-item-content class="mx-2">
@@ -49,11 +47,11 @@
                     <v-list two-line shaped>
 
                         <v-list-group 
-                         v-for="album in AlbumList" 
-                         :key="album.title"
-                         multiple 
-                         no-action
-                         active-class="blue--text">
+                        v-for="album in AlbumList" 
+                        :key="album.title"
+                        multiple 
+                        no-action
+                        active-class="blue--text">
                             <template v-slot:activator>
                                 <v-list-item>
                                     <v-list-item-content>
@@ -73,9 +71,8 @@
 
                 </v-card>
             </v-col>
-
             <!-- Books Card -->
-            <v-col sm="12" lg="4">
+            <v-col sm="12" lg="4" class="mx-n2">
                 <v-card outlined class="mx-auto">
                     <v-list-item-content class="mx-2">
                         <div class="overline mb-4">Eyes</div>
@@ -86,11 +83,11 @@
                     <v-list two-line shaped>
 
                         <v-list-group 
-                         v-for="book in BookList" 
-                         :key="book.title"
-                         multiple 
-                         no-action
-                         active-class="blue--text">
+                        v-for="book in BookList" 
+                        :key="book.title"
+                        multiple 
+                        no-action
+                        active-class="blue--text">
                             <template v-slot:activator>
                                 <v-list-item>
                                     <v-list-item-content>
@@ -122,7 +119,7 @@
             </v-col>
 
             <!-- Thoughts Card -->
-            <v-col sm="12" lg="4">
+            <v-col sm="12" lg="4" class="mr-2">
                 <v-card outlined class="mx-auto">
                     <v-list-item-content class="mx-2">
                         <div class="overline mb-4">Mind</div>
@@ -131,6 +128,42 @@
                     </v-list-item-content>
                 </v-card>
             </v-col>
+        </v-row>
+
+        <!-- Timeline -->
+        <v-row justify="start">
+            <v-col cols="8" left justify="start" flex>
+                <v-timeline alignTop justify="start">
+                    <v-timeline-item v-for="(item,i) in Timeline" :key="i" large right justify="start">
+                        <template v-slot:icon>
+                            <v-icon v-on="on" large>{{item.icon}}</v-icon>
+                        </template>
+                        <template v-slot:opposite>
+                            <span>{{item.date}}</span>
+                        </template>
+                        <v-card class="elevation-2">
+                            <v-card-title class="headline">{{item.title}}</v-card-title>
+                            <v-card-text>{{item.body}}</v-card-text>
+                        </v-card>
+                    </v-timeline-item>
+                </v-timeline>
+            </v-col>
+        </v-row>
+
+        <!-- Other Links -->
+        <v-row style="background:#F5F5F5">
+            <p class="headline">Links</p>
+            <v-col sm="12" lg="4">
+                LinkedIn
+            </v-col>
+            <v-col sm="12" lg="4">
+                Github
+            </v-col>
+            <v-col sm="12" lg="4">
+                16Personalites
+                https://www.16personalities.com/profiles/732c428cea46c
+            </v-col>
+            
         </v-row>
 
         <v-sheet class="d-flex" height="120"></v-sheet>
@@ -149,7 +182,23 @@ export default {
     data () {
         return {
             AlbumList: albumlist,
-            BookList: booklist
+            BookList: booklist,
+            Timeline : [
+                {
+                    "title":"Born",
+                    "icon":"mdi-history",
+                    "location":"Grass Valley, California",
+                    "date":"April 26, 2001",
+                    "body":"The adventure begins"
+                },
+                {
+                    "title":"The Big Move",
+                    "icon":"mdi-home",
+                    "location":"Grass Valley -> Austin, TX",
+                    "date":"Winter, 2003",
+                    "body":"Move to my childhood home, and the city I was raised in"
+                }
+            ]
         }
     },
     components: {
@@ -165,6 +214,6 @@ export default {
 
 <style scoped>
     #bg {
-        background-image:linear-gradient(.125turn,#29339b, #da4167);
+        background-image:linear-gradient(.125turn,#2B59C3, #D56AA0);
     }
 </style>
