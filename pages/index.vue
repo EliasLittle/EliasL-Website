@@ -130,13 +130,18 @@
             </v-col>
         </v-row>
 
-        <!-- Timeline -->
+        <v-row>
+            <adsbygoogle> Hello Ad</adsbygoogle>
+        </v-row>
+
+        <!--
+        <!-- Timeline 
         <v-row justify="start">
             <v-col cols="8" left justify="start" flex>
                 <v-timeline alignTop justify="start">
                     <v-timeline-item v-for="(item,i) in Timeline" :key="i" large right justify="start">
                         <template v-slot:icon>
-                            <v-icon v-on="on" large>{{item.icon}}</v-icon>
+                            <v-icon large>{{item.icon}}</v-icon>
                         </template>
                         <template v-slot:opposite>
                             <span>{{item.date}}</span>
@@ -150,7 +155,7 @@
             </v-col>
         </v-row>
 
-        <!-- Other Links -->
+        <!-- Other Links 
         <v-row style="background:#F5F5F5">
             <p class="headline">Links</p>
             <v-col sm="12" lg="4">
@@ -165,6 +170,7 @@
             </v-col>
             
         </v-row>
+        -->
 
         <v-sheet class="d-flex" height="120"></v-sheet>
     </div>
