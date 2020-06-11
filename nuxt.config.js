@@ -53,6 +53,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxt/content',
+    '@nuxtjs/google-adsense'
     //'@nuxtjs/markdownit'
   ],
   /*
@@ -73,6 +74,13 @@ export default {
         theme: 'prismjs/themes/prism.css'
       }
     }
+  },
+  /*
+  ** Nuxt Google-Adsense module configuration
+  ** See https://github.com/nuxt-community/google-adsense-module
+  */
+  'google-adsense': {
+    id: 'ca-pub-#########'
   },
   /*
   ** [optional] markdownit options
