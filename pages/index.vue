@@ -11,6 +11,9 @@
         <div class = "display-4 font-italic font-weight-thin mx-auto">
             Elias Joaquín Little
         </div>
+        <div class="text-h5 font-weight-bold mt-4 mx-auto">
+            Aspiring Polymath
+        </div>
     </v-parallax>
 
     <v-sheet height="50"></v-sheet>
@@ -32,6 +35,7 @@
             </v-col>
         </v-row>
 
+        <!-- hobby cards -->
         <v-row style="background:#F5F5F5" class="mx-n10 px-5 py-2">
             <!-- Albums Card -->
             <v-col sm="12" lg="4" class="">
@@ -130,11 +134,11 @@
             </v-col>
         </v-row>
 
+        <!-- ads -->
         <v-row>
             <adsbygoogle> Hello Ad</adsbygoogle>
         </v-row>
 
-        <!--
         <!-- Timeline 
         <v-row justify="start">
             <v-col cols="8" left justify="start" flex>
@@ -157,24 +161,27 @@
         -->
 
         <!-- Other Links -->
-        <v-row class="mt-8 px-5">
-            <p class="display-1 font-weight-bold">Profiles</p>
-        </v-row>
-        <v-row style="background:#F5F5F5" class="mx-n10 px-5 py-2">
-            <v-col sm="12" lg="4" v-for="profile in Profiles" :key="profile.name">
-                <v-card :color="profile.color" :href="profile.link" height="200" hover>
-                    <v-list-item three-line>
-                        <v-list-item-content class="white--text">
-                            <div class="overline mb-2">{{profile.overline}}</div>
-                            <v-list-item-title class="headline mb-1" v-text="profile.name"></v-list-item-title>
-                            <v-list-item-text class="body-2 white--text" v-text="profile.body"></v-list-item-text>
-                        </v-list-item-content>
-                        <v-list-item-avatar tile size="60"><v-img contain :src="profile.logo"/></v-list-item-avatar>
-                    </v-list-item>
-                </v-card>
-            </v-col>
-        </v-row>
-        
+        <div id="profiles">
+            <v-row class="pt-8 px-10 mx-n10">
+                <p class="display-1 font-weight-bold">Profiles</p>
+            </v-row>
+            <v-row style="background:#F5F5F5" class="mx-n10 px-5 py-2">
+                <v-col sm="12" lg="4" v-for="profile in Profiles" :key="profile.name">
+                    <v-hover v-slot:default="{ hover }">
+                        <v-card :elevation="hover ? 8 : 2" :class="{ 'on-hover': hover }" :color="profile.color" :href="profile.link" height="200">
+                            <v-list-item three-line>
+                                <v-list-item-content class="white--text">
+                                    <div class="overline mb-2">{{profile.overline}}</div>
+                                    <v-list-item-title class="headline mb-1" v-text="profile.name"></v-list-item-title>
+                                    <v-list-item-text class="body-2 white--text" v-text="profile.body"></v-list-item-text>
+                                </v-list-item-content>
+                                <v-list-item-avatar tile size="60"><v-img contain :src="profile.logo"/></v-list-item-avatar>
+                            </v-list-item>
+                        </v-card>
+                    </v-hover>
+                </v-col>
+            </v-row>
+        </div>
 
         <v-sheet class="d-flex" height="120"></v-sheet>
     </div>
@@ -251,5 +258,8 @@ export default {
 <style scoped>
     #bg {
         background-image:linear-gradient(.125turn,#2B59C3, #D56AA0);
+    }
+    .v-card {
+        transition: ease-in-out opasity .4s ;
     }
 </style>
