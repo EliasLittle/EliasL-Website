@@ -1,13 +1,14 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
 
 export default {
+  
   mode: 'universal',
   /*
    ** Headers of the page
    */
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_name || 'Elias Little - Aspiring Polymath',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,6 +19,12 @@ export default {
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
+  /*
+
+  */
+  generate: {
+    routes: []
   },
   /*
    ** Customize the progress-bar color
@@ -46,6 +53,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxt/content',
+    '@nuxtjs/google-adsense'
     //'@nuxtjs/markdownit'
   ],
   /*
@@ -66,6 +74,13 @@ export default {
         theme: 'prismjs/themes/prism.css'
       }
     }
+  },
+  /*
+  ** Nuxt Google-Adsense module configuration
+  ** See https://github.com/nuxt-community/google-adsense-module
+  */
+  'google-adsense': {
+    id: 'ca-pub-#########'
   },
   /*
   ** [optional] markdownit options

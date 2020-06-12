@@ -1,6 +1,6 @@
 <template>
   <v-app light>
-    <navbar></navbar>
+  
     <nuxt />
     
     <v-footer :fixed="fixed" app>

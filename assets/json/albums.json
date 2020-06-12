@@ -1,7 +1,6 @@
-{
-    "books": [
+[
         {
-            "title" : "For Emma Forever Ago",
+            "title" : "For Emma, Forever Ago",
             "artist" : "Bon Iver",
             "url" : "https://open.spotify.com/album/4SxFsOO0h4Nz3lFJuysKq5?si=kwnbbWXcQdalx6lJrE4B8Q",
             "embed" : "https://open.spotify.com/embed/album/4SxFsOO0h4Nz3lFJuysKq5"
@@ -9,17 +8,20 @@
         {
             "title" : "Skin",
             "artist" : "Flume",
-            "url" : "https://open.spotify.com/album/4NZWRpoMuXaHU7csTjWdB5?si=7yFJvu_4S9iFtyT_3CMf6Q"
+            "url" : "https://open.spotify.com/album/4NZWRpoMuXaHU7csTjWdB5?si=7yFJvu_4S9iFtyT_3CMf6Q",
+            "embed" : "https://open.spotify.com/embed/album/4NZWRpoMuXaHU7csTjWdB5"
         },
         {
             "title" : "Lewis Del Mar",
             "artist" : "Lewis Del Mar",
-            "url" : "https://open.spotify.com/album/7BKGTpCWDwTCeHnlLFcfLJ?si=zF62WnYrSS2tBEWEwo2xXA"
+            "url" : "https://open.spotify.com/album/7BKGTpCWDwTCeHnlLFcfLJ?si=zF62WnYrSS2tBEWEwo2xXA",
+            "embed" : "https://open.spotify.com/embed/album/7BKGTpCWDwTCeHnlLFcfLJ"
         },
         {
             "title" : "\"Awaken, My Love!\"",
             "artist" : "Childish Gambino",
-            "url": "https://open.spotify.com/album/4Carzsnpd6yvuHZ49I0oz8?si=HB4HmYuxRhKfo8ywr_tOMA"
+            "url": "https://open.spotify.com/album/4Carzsnpd6yvuHZ49I0oz8?si=HB4HmYuxRhKfo8ywr_tOMA",
+            "embed" : "https://open.spotify.com/embed/album/4Carzsnpd6yvuHZ49I0oz8"
         },
         {
             "title" : "Indigo",
@@ -27,5 +29,4 @@
             "url" : "https://open.spotify.com/album/5irwMayGMsLCrokUzoKGF7?si=pCFk678VT_q91TBUo_lPVw",
             "embed" : "https://open.spotify.com/embed/album/5irwMayGMsLCrokUzoKGF7"
         }
-    ]
-}
+]
