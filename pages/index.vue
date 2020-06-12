@@ -168,7 +168,7 @@
             <v-row style="background:#F5F5F5" class="mx-n10 px-5 py-2">
                 <v-col sm="12" lg="4" v-for="profile in Profiles" :key="profile.name">
                     <v-hover v-slot:default="{ hover }">
-                        <v-card :elevation="hover ? 8 : 2" :class="{ 'on-hover': hover }" :color="profile.color" :href="profile.link" height="200">
+                        <v-card :elevation="hover ? 12 : 2" class="transition-swing" :color="profile.color" :href="profile.link" height="200">
                             <v-list-item three-line>
                                 <v-list-item-content class="white--text">
                                     <div class="overline mb-2">{{profile.overline}}</div>
