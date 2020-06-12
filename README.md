@@ -1,6 +1,9 @@
 # Website-Blog
 
 > Personal Website and Blog
+## About
+
+Includes information about who I am and what I've done and currently do. Also includes my personal blog: Stochastic Theories
 
 ## Build Setup
 
