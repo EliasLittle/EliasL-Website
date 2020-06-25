@@ -44,6 +44,9 @@
                     <v-divider class="mt-6"></v-divider>
                 </v-col>
             </v-row>
+            <v-row>
+                <adsbygoogle />
+            </v-row>
 
         </v-container>
 
