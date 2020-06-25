@@ -83,7 +83,7 @@ export default {
   ** See https://github.com/nuxt-community/google-adsense-module
   */
   'google-adsense': {
-    id: 'ca-pub-4222781804585670'
+    id: 'ca-pub-#########'
   },
   /*
   ** [optional] markdownit options
