@@ -11,8 +11,9 @@
         <div class = "display-4 font-italic font-weight-thin mx-auto">
             Elias Joaquín Little
         </div>
-        <div class="text-h5 font-weight-bold mt-4 mx-auto">
+        <div class = "text-h5 white--text font-weight-bold mt-4 mx-auto" >
             Aspiring Polymath
+            <!-- <vue-typer :text='[ "Aspring Polymath", "Full-time Student"]' erase-style="backspace"></vue-typer> -->
         </div>
     </v-parallax>
 
@@ -194,7 +195,6 @@ import navbar from '~/components/navbar.vue';
 import albumlist from '~/assets/json/albums.json';
 import booklist from '~/assets/json/books.json';
 
-
 export default {
     data () {
         return {
@@ -261,5 +261,14 @@ export default {
     }
     .v-card {
         transition: ease-in-out opasity .4s ;
+    }
+    .vue-typer .custom.char.typed {
+        color: #FFFFFF;
+    }
+    .vue-typer {
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    }
+    .vue-typer .custom.char.typed {
+    color: #009688;
     }
 </style>

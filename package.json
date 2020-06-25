@@ -18,10 +18,12 @@
     "markdown-it": "^11.0.0",
     "nuxt": "^2.0.0",
     "remark-emoji": "^2.1.0",
-    "remark-highlight.js": "^6.0.0"
+    "remark-highlight.js": "^6.0.0",
+    "vue-typer": "^1.2.0"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^1.0.0",
+    "@mdi/font": "^5.3.45",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/markdownit-loader": "^1.1.1",
