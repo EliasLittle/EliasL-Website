@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^1.0.0",
-    "@mdi/font": "^5.3.45",
+    "@fortawesome/fontawesome-free": "^5.13.1",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/markdownit-loader": "^1.1.1",
@@ -33,6 +33,8 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "material-design-icons-iconfont": "^5.0.1",
+    "prettier": "^1.19.1",
+    "vue-particles": "^1.0.9"
   }
 }

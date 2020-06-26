@@ -137,7 +137,7 @@
 
         <!-- ads -->
         <v-row>
-            <adsbygoogle> Hello Ad</adsbygoogle>
+            <!-- <adsbygoogle> Hello Ad</adsbygoogle> -->
         </v-row>
 
         <!-- Timeline 
@@ -265,10 +265,7 @@ export default {
     .vue-typer .custom.char.typed {
         color: #FFFFFF;
     }
-    .vue-typer {
-        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    }
-    .vue-typer .custom.char.typed {
-    color: #009688;
+    .particle-wrap {
+        height: 30em;
     }
 </style>
