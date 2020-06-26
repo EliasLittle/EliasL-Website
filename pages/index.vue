@@ -36,104 +36,10 @@
             </v-col>
         </v-row>
 
-        <!-- hobby cards -->
-        <v-row style="background:#F5F5F5" class="mx-n10 px-5 py-2">
-            <!-- Albums Card -->
-            <v-col sm="12" lg="4" class="">
-                <v-card outlined class="mx-auto">
-
-                    <v-list-item-content class="mx-2">
-                        <div class="overline mb-4">Ears</div>
-                        <v-list-item-title class="headline mb-1">Music</v-list-item-title>
-                        <v-list-item-subtitle>Some of my favorite albums</v-list-item-subtitle>
-                    </v-list-item-content>
-
-                    
-                    <v-list two-line shaped>
-
-                        <v-list-group 
-                        v-for="album in AlbumList" 
-                        :key="album.title"
-                        multiple 
-                        no-action
-                        active-class="blue--text">
-                            <template v-slot:activator>
-                                <v-list-item>
-                                    <v-list-item-content>
-                                        <v-list-item-title>{{album.title}}</v-list-item-title>
-                                        <v-list-item-subtitle>{{album.artist}}</v-list-item-subtitle>
-                                    </v-list-item-content>
-                                </v-list-item>
-                            </template>
-                            <v-list-item>
-                                <v-list-item-content>
-                                    <iframe :src="album.embed" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                                </v-list-item-content>
-                            </v-list-item>
-                        </v-list-group>
-
-                    </v-list>
-
-                </v-card>
-            </v-col>
-            <!-- Books Card -->
-            <v-col sm="12" lg="4" class="">
-                <v-card outlined class="mx-auto">
-                    <v-list-item-content class="mx-2">
-                        <div class="overline mb-4">Eyes</div>
-                        <v-list-item-title class="headline mb-1">Reading List</v-list-item-title>
-                        <v-list-item-subtitle>Books I'm currently reading or have recently read</v-list-item-subtitle>
-                    </v-list-item-content>
-
-                    <v-list two-line shaped>
-
-                        <v-list-group 
-                        v-for="book in BookList" 
-                        :key="book.title"
-                        multiple 
-                        no-action
-                        active-class="blue--text">
-                            <template v-slot:activator>
-                                <v-list-item>
-                                    <v-list-item-content>
-                                        <v-list-item-title>{{book.title}}</v-list-item-title>
-                                        <v-list-item-subtitle class="text--primary d-none d-md-flex d-lg-none">{{book.subtitle}}</v-list-item-subtitle>
-                                        <v-list-item-subtitle >{{book.author}}</v-list-item-subtitle>
-                                    </v-list-item-content>
-                                </v-list-item>
-                            </template>
-                            <v-list-item>
-                                <v-list-item-content>
-                                    <v-row>
-                                        <v-col sm="3" lg="6" class="mx-2">
-                                            <a target="_blank" :href="book.urlone"><img border="0" :src="book.urltwo" ></a><img src="book.urlthree" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                                        </v-col>
-                                        <!-- Future addition: Review link
-                                        <v-col sm="8" md="4" lg="6" class="mx-2">
-                                            <v-sheet color="blue lighten-3" height="250" class="float-right d-lg-flex">{{book.review}}</v-sheet>
-                                        </v-col>
-                                        -->
-                                    </v-row>
-                                </v-list-item-content>
-                            </v-list-item>
-                        </v-list-group>
-
-                    </v-list>
-
-                </v-card>
-            </v-col>
-
-            <!-- Thoughts Card -->
-            <v-col sm="12" lg="4" class="">
-                <v-card outlined class="mx-auto">
-                    <v-list-item-content class="mx-2">
-                        <div class="overline mb-4">Mind</div>
-                        <v-list-item-title class="headline mb-1">Some Thoughts</v-list-item-title>
-                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
-                    </v-list-item-content>
-                </v-card>
-            </v-col>
-        </v-row>
+        <!-- Hobby Cards -->
+        <div id="HobbyCards">
+        <HobbyCards></HobbyCards>
+        </div>
 
         <!-- ads -->
         <v-row>
@@ -161,28 +67,8 @@
         </v-row>
         -->
 
-        <!-- Other Links -->
-        <div id="profiles">
-            <v-row class="pt-8 px-10 mx-n10">
-                <p class="display-1 font-weight-bold">Profiles</p>
-            </v-row>
-            <v-row style="background:#F5F5F5" class="mx-n10 px-5 py-2">
-                <v-col sm="12" lg="4" v-for="profile in Profiles" :key="profile.name">
-                    <v-hover v-slot:default="{ hover }">
-                        <v-card :elevation="hover ? 12 : 2" class="transition-swing" :color="profile.color" :href="profile.link" height="200">
-                            <v-list-item three-line>
-                                <v-list-item-content class="white--text">
-                                    <div class="overline mb-2">{{profile.overline}}</div>
-                                    <v-list-item-title class="headline mb-1" v-text="profile.name"></v-list-item-title>
-                                    <v-list-item-text class="body-2 white--text" v-text="profile.body"></v-list-item-text>
-                                </v-list-item-content>
-                                <v-list-item-avatar tile size="60"><v-img contain :src="profile.logo"/></v-list-item-avatar>
-                            </v-list-item>
-                        </v-card>
-                    </v-hover>
-                </v-col>
-            </v-row>
-        </div>
+        <!-- Other Profiles -->
+        <Profiles></Profiles>
 
         <v-sheet class="d-flex" height="120"></v-sheet>
     </div>
@@ -192,14 +78,12 @@
 
 <script>
 import navbar from '~/components/navbar.vue';
-import albumlist from '~/assets/json/albums.json';
-import booklist from '~/assets/json/books.json';
+import HobbyCards from '~/components/HobbyCards.vue';
+import Profiles from '~/components/Profiles.vue';
 
 export default {
     data () {
         return {
-            AlbumList: albumlist,
-            BookList: booklist,
             Timeline : [
                 {
                     "title":"Born",
@@ -215,37 +99,13 @@ export default {
                     "date":"Winter, 2003",
                     "body":"Move to my childhood home, and the city I was raised in"
                 }
-            ],
-            Profiles : [
-                {
-                    "name":"LinkedIn",
-                    "link":"https://www.linkedin.com/in/elias-little/",
-                    "logo":"img/linkedin.svg",
-                    "color":"#0576B5",
-                    "overline":"Business",
-                    "body":"Come say 'hi' and see what I've been up to professionally. Maybe we can work together on something!"
-                },
-                {
-                    "name":"GitHub",
-                    "link":"https://github.com/EliasLittle",
-                    "logo":"img/github.svg",
-                    "color":"#7042C1",
-                    "overline":"Code",
-                    "body":"Take a peek at some of my code. Some of it's good, some of it's quick, most of it is unfinished (I'll get around to it eventually)"
-                },
-                {
-                    "name":"16 Personalities",
-                    "link":"https://www.16personalities.com/profiles/732c428cea46c",
-                    "logo":"img/16p.svg",
-                    "color":"#3D9294",
-                    "overline":"Personality",
-                    "body":"Get to know me before we even meet. I promise there won't be a test though when we do, so don't be pressured to study."
-                }
             ]
         }
     },
     components: {
-      navbar
+      navbar,
+      HobbyCards,
+      Profiles
     },
     async asyncData({$content}) {
         const aboutMe = await $content('AboutMe').fetch();
