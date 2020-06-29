@@ -1,6 +1,6 @@
 <template>
   <v-app-bar tile >
-    <v-toolbar-title>Elias</v-toolbar-title>
+    <v-toolbar-title class="font-italic font-weight-light">EliasL</v-toolbar-title>
     <v-divider inset vertical class="ml-4 mr-2"></v-divider>
     <v-toolbar-items>
       <v-btn text to="/" class="font-weight-light" nuxt>About Me</v-btn>

@@ -18,10 +18,12 @@
     "markdown-it": "^11.0.0",
     "nuxt": "^2.0.0",
     "remark-emoji": "^2.1.0",
-    "remark-highlight.js": "^6.0.0"
+    "remark-highlight.js": "^6.0.0",
+    "vue-typer": "^1.2.0"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^1.0.0",
+    "@fortawesome/fontawesome-free": "^5.13.1",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/markdownit-loader": "^1.1.1",
@@ -31,6 +33,9 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "material-design-icons-iconfont": "^5.0.1",
+    "prettier": "^1.19.1",
+    "vue-friendly-iframe": "^0.18.0",
+    "vue-particles": "^1.0.9"
   }
 }

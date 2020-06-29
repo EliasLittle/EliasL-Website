@@ -37,7 +37,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    // See vueTyper.js or https://github.com/cngu/vue-typer
+    {src: '~/plugins/vueTyper.js', ssr: false},
+    {src: '~/plugins/vue-particles.js', ssr: false}
+  ],
   /*
    ** Nuxt.js dev-modules
    */
