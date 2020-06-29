@@ -3,7 +3,3 @@
 Born in California and raised in Texas, only one thing is certain. I am liberal with my servings of BBQ. Most of my time is occupied working on all sorts of various projects, most of which I never end up finishing (it's a real bad habit). Some of my current projects include working on [Bright Future News](https://BrightFuture.news/) :newspaper:, making a sword :crossed_swords: (yes, a real one – out of steel – I'm excited), and expanding on this very website. Some projects that I often will revert back to include working on an electric guitar that I started building about 3 years ago, working on [Project Euler Problems](https://ProjectEuler.net/):heavy_division_sign:, or trying to learn piano :musical_keyboard: yet again.
 
 My greatest passion in life is learning new things. My primary interest are found in the STEM realm, including math, computer science, physics, but they reach far beyond that. I am an avid musician and aesthete of music, I am also have recently been getting my feet wet with psychology. Other topics of interest to me include architecture, material science (particularly graphene), philosophy, and finance.
-
-<v-spacer><div></v-spacer>
-
-<v-sparkline :smooth="16" :gradient="['#2B59C3', '#D56AA0']" gradient-direction="left" :value="[1,1,2,3,5,8,13,21,34,55,89,144]" line-width="2" height="30" auto-draw stroke-linecap="round"></v-sparkline><!--[1,2,4,8,16,32,64,128,256]-->

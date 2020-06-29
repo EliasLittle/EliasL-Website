@@ -1,6 +1,16 @@
 <template>
     <div id="profiles">
-        <v-row class="pt-8 px-10 mx-n10">
+        <v-lazy>
+            <v-sparkline :smooth="16" 
+            :gradient="['#0576B5', '#7042C1','#3D9294']" 
+            gradient-direction="left" 
+            :value="[0,0,1,3,7,11,13,14,14]"
+            line-width="1.5" height="22" 
+            auto-draw stroke-linecap="round"
+            class="ma-md-n4 mx-md-n10  my-4 ">
+            </v-sparkline>
+        </v-lazy>
+        <v-row class="px-10 mx-n10">
             <p class="display-1 font-weight-bold">Profiles</p>
         </v-row>
         <v-row style="background:#F5F5F5" class="mx-n10 px-5 py-2">
@@ -19,6 +29,16 @@
                 </v-hover>
             </v-col>
         </v-row>
+        <v-lazy>
+            <v-sparkline :smooth="16" 
+            :gradient="['#0576B5', '#7042C1','#3D9294']" 
+            gradient-direction="left" 
+            :value="[0,0,1,3,7,11,13,14,14]"
+            line-width="1.5" height="22" 
+            auto-draw stroke-linecap="round"
+            class="ma-md-n4 mx-md-n10 my-4 ">
+            </v-sparkline>
+        </v-lazy>
     </div>
 </template>
 
