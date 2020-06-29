@@ -1,0 +1,22 @@
+[
+    {
+        "title" : "Master of None",
+        "genre" : "Comedy-Drama"
+    },
+    {
+        "title" : "Avatar the Last Airbender",
+        "genre" : "Animation"
+    },
+    {
+        "title" : "Parks and Recreation",
+        "genre" : "Sitcom"
+    },
+    {
+        "title" : "Ozark",
+        "genre" : "Drama"
+    },
+    {
+        "title" : "Sherlock",
+        "genre" : "Mystery"
+    }
+]

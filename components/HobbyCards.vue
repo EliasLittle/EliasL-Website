@@ -39,11 +39,12 @@
 
             </v-card>
         </v-col>
+
         <!-- Books Card -->
         <v-col sm="12" lg="4" class="">
             <v-card outlined class="mx-auto">
                 <v-list-item-content class="mx-2">
-                    <div class="overline mb-4">Eyes</div>
+                    <div class="overline mb-4">Mind</div>
                     <v-list-item-title class="headline mb-1">Reading List</v-list-item-title>
                     <v-list-item-subtitle>Books I'm currently reading or have recently read</v-list-item-subtitle>
                 </v-list-item-content>
@@ -86,14 +87,36 @@
             </v-card>
         </v-col>
 
-        <!-- Thoughts Card -->
+        <!-- Shows Card -->
         <v-col sm="12" lg="4" class="">
             <v-card outlined class="mx-auto">
                 <v-list-item-content class="mx-2">
-                    <div class="overline mb-4">Mind</div>
-                    <v-list-item-title class="headline mb-1">Some Thoughts</v-list-item-title>
-                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+                    <div class="overline mb-4">Eyes</div>
+                    <v-list-item-title class="headline mb-1">Shows</v-list-item-title>
+                    <v-list-item-subtitle>Some of my favorite TV shows</v-list-item-subtitle>
                 </v-list-item-content>
+
+                <v-list two-line shaped>
+                    <v-list-group
+                    v-for="show in ShowList" 
+                    :key="show.title" 
+                    no-action
+                    active-class="blue--text">
+                        <template v-slot:activator>
+                            <v-list-item>
+                                <v-list-item-content>
+                                    <v-list-item-title>{{show.title}}</v-list-item-title>
+                                    <v-list-item-subtitle >{{show.genre}}</v-list-item-subtitle>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </template>
+                        <v-list-item>
+                            <v-list-item-content>
+                                Still deciding what to put here...
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-list-group>
+                </v-list>
             </v-card>
         </v-col>
     </v-row>
@@ -101,12 +124,14 @@
 <script>
 import albumlist from '~/assets/json/albums.json';
 import booklist from '~/assets/json/books.json';
+import showlist from '~/assets/json/shows.json';
 
 export default {
   data() {
     return {
         AlbumList: albumlist,
         BookList: booklist,
+        ShowList: showlist
     }
   },
   methods: {}
