@@ -5,7 +5,7 @@
     <v-toolbar-items>
       <v-btn text to="/" class="font-weight-light" nuxt>About Me</v-btn>
     </v-toolbar-items>
-    
+
     <v-spacer></v-spacer>
 
     <div class="hidden-md-and-up">

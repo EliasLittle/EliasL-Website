@@ -1,7 +1,7 @@
 <template>
-    
+
   <div>
-    
+
     <header>
       <navbar></navbar>
     </header>
@@ -21,13 +21,13 @@
 
     <div class="mx-10 mb-12">
         <v-row>
-            
+
             <v-col xs="0" lg="3" class="d-none d-lg-flex">
                 <v-container>
                     <v-img src="img/eliasHeadshot.jpg"/>
                 </v-container>
             </v-col>
-            
+
 
             <v-col xs="12" sm="12" lg="9">
                 <v-container>
@@ -69,6 +69,7 @@
 
         <!-- Other Profiles -->
         <Profiles></Profiles>
+
 
         <v-sheet class="d-flex" height="120"></v-sheet>
     </div>
