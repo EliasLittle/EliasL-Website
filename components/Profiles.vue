@@ -7,7 +7,7 @@
             :value="[0,0,1,3,7,11,13,14,14]"
             line-width="1.5" height="22" 
             auto-draw stroke-linecap="round"
-            class="ma-n4 mx-n10">
+            class="ma-md-n4 mx-md-n10  my-4 ">
             </v-sparkline>
         </v-lazy>
         <v-row class="px-10 mx-n10">
@@ -36,7 +36,7 @@
             :value="[0,0,1,3,7,11,13,14,14]"
             line-width="1.5" height="22" 
             auto-draw stroke-linecap="round"
-            class="ma-n4 mx-n10">
+            class="ma-md-n4 mx-md-n10 my-4 ">
             </v-sparkline>
         </v-lazy>
     </div>
