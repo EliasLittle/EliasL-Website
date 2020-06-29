@@ -32,13 +32,22 @@
             <v-col xs="12" sm="12" lg="9">
                 <v-container>
                     <nuxt-content :document="aboutMe" />
+                    <v-lazy>
+                        <v-sparkline :smooth="16" 
+                        :gradient="['#2B59C3', '#D56AA0']" 
+                        gradient-direction="left" 
+                        :value="[1,1,2,3,5,8,13,21,34,55,89,144]" 
+                        line-width="2" height="30" 
+                        auto-draw stroke-linecap="round">
+                        </v-sparkline>
+                    </v-lazy>
                 </v-container>
             </v-col>
         </v-row>
 
         <!-- Hobby Cards -->
         <div id="HobbyCards">
-        <HobbyCards></HobbyCards>
+            <HobbyCards></HobbyCards>
         </div>
 
         <!-- ads -->
@@ -69,7 +78,6 @@
 
         <!-- Other Profiles -->
         <Profiles></Profiles>
-
 
         <v-sheet class="d-flex" height="120"></v-sheet>
     </div>
