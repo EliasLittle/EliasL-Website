@@ -11,7 +11,7 @@
         <div class = "display-4 font-italic font-weight-thin mx-auto">
             Elias Joaquín Little
         </div>
-        <div class = "text-h5 white--text font-weight-bold mt-4 mx-auto" >
+        <div class = "text-h5 white--text font-weight-bold mt-4 mx-sm-auto" >
             Aspiring Polymath
             <!-- <vue-typer :text='[ "Aspring Polymath", "Full-time Student"]' erase-style="backspace"></vue-typer> -->
         </div>
