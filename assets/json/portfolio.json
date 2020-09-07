@@ -1,16 +1,23 @@
 [
     {
+      "title" : "Monte Carlo Credit",
+      "subtitle" : "A Service that Recommends The Best Credit Card for You.",
+      "logo" : "https://montecarlocredit.com/images/mcc.svg",
+      "link" : "https://montecarlocredit.com/",
+      "body" : "An idea of mine that I built with my brother as a part of Astuary Developments during the summer of 2020. This service analyzes your spending habits and compares it to the rewards of a bunch of different credit cards in order to recommend the best one to you."
+    },
+    {
+        "title" : "Bright Future",
+        "subtitle" : "A Site That Aggregates Positive News.",
+        "logo" : "https://brightfuture.news/images/search.svg",
+        "link" : "https://brightfuture.news/",
+        "body" : "A project of mine that I built with the help of my brother during the summer of 2020. The site scrapes a set of well-known news sites that we are continuing to add to, then uses natural language processing to analyze the positivity of each article, then presents the best ones in each category."
+    },
+    {
         "title" : "Torzal Guitars",
         "subtitle" : "Ergonomic Handmade Guitar Company. Family Business.",
         "logo" : "https://torzalguitars.com/image/logo.png",
         "link" : "https://torzalguitars.com",
         "body" : "A family business, I help with various aspects of the business from merch, to business decisions. Available"
-    },
-    {
-        "title" : "Bright Future",
-        "subtitle" : "A Site That Aggregates Positive News.",
-        "logo" : "https://brightfuture.news/_nuxt/assets/BrightFuture.svg",
-        "link" : "https://brightfuture.news/",
-        "body" : "A project of mine that I built with the help of my brother during the summer of 2020. The site scrapes a set of well-known news sites that we are continuing to add to, then uses natural language processing to analyze the positivity of each article, then presents the best ones in each category."
     }
 ]

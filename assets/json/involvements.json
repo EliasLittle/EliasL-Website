@@ -7,20 +7,6 @@
         "body" : "I am a full-time undergaduate student at Cornell University. I am majoring in Operations Research with double minors in Computer Science and Applied Math."
     },
     {
-        "title" : "Bright Future",
-        "subtitle" : "A Site That Aggregates Positive News.",
-        "logo" : "https://brightfuture.news/_nuxt/assets/BrightFuture.svg",
-        "link" : "https://brightfuture.news/",
-        "body" : "A project of mine that I built with the help of my brother during the summer of 2020. The site scrapes a set of well-known news sites that we are continuing to add to, then uses natural language processing to analyze the positivity of each article, then presents the best ones in each category."
-    },
-    {
-        "title" : "Torzal Guitars",
-        "subtitle" : "Ergonomic Handmade Guitar Company – Family Business.",
-        "logo" : "https://torzalguitars.com/image/logo.png",
-        "link" : "https://torzalguitars.com",
-        "body" : "A family business, I help with various aspects of the business from merch, to business decisions. Available"
-    },
-    {
         "title" : "Cornell Hyperloop",
         "subtitle" : "An Engineering Project Team at Cornell.",
         "logo" : "https://hyperloop.cornell.edu/images/logo_symbol.png",
@@ -33,5 +19,19 @@
         "logo" : "https://static.wixstatic.com/media/7fc1ac_251297dcc04f44709c14212ae0e1f00e~mv2_d_2400_2400_s_4_2.png/v1/fill/w_126,h_126,al_c,q_85,usm_0.66_1.00_0.01/7fc1ac_251297dcc04f44709c14212ae0e1f00e~mv2_d_2400_2400_s_4_2.webp",
         "link" : "https://www.cuanythinggoes.net/",
         "body" : "I play Cello in the band for the group. Come see our show each semester!"
+    },
+    {
+      "title" : "Cornell SHPE",
+      "subtitle" : "Cornell's chapter of the Society of Hispanic Professional Engineers.",
+      "logo" : "https://www.shpe.cornell.edu/images/shpe_small.png",
+      "link" : "https://www.shpe.cornell.edu/",
+      "body" : "I am a member of Cornell's SHPE chapter, where we engage in various types of outreach."
+    },
+    {
+        "title" : "Torzal Guitars",
+        "subtitle" : "Ergonomic Handmade Guitar Company – Family Business.",
+        "logo" : "https://torzalguitars.com/image/logo.png",
+        "link" : "https://torzalguitars.com",
+        "body" : "A family business, I help with various aspects of the business from merch, to business decisions. Available"
     }
 ]

@@ -33,12 +33,13 @@
                 <v-container>
                     <nuxt-content :document="aboutMe" />
                     <v-lazy>
-                        <v-sparkline :smooth="16" 
-                        :gradient="['#2B59C3', '#D56AA0']" 
-                        gradient-direction="left" 
-                        :value="[1,1,2,3,5,8,13,21,34,55,89,144]" 
-                        line-width="2" height="30" 
-                        auto-draw stroke-linecap="round">
+                        <v-sparkline :smooth="16"
+                        :gradient="['#2B59C3', '#D56AA0']"
+                        gradient-direction="left"
+                        :value="[1,1]"
+                        line-width="2" height="30"
+                        auto-draw stroke-linecap="round"
+                        class="pt-n5 mt-n5" >
                         </v-sparkline>
                     </v-lazy>
                 </v-container>
@@ -55,7 +56,7 @@
             <!-- <adsbygoogle> Hello Ad</adsbygoogle> -->
         </v-row>
 
-        <!-- Timeline 
+        <!-- Timeline
         <v-row justify="start">
             <v-col cols="8" left justify="start" flex>
                 <v-timeline alignTop justify="start">

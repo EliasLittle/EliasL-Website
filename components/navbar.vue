@@ -42,10 +42,10 @@ export default {
           "title":"Portfolio",
           "route":"/portfolio"
         },
-        {
-          "title":"Stochastic Theories",
-          "route":"/blog"
-        }
+        // {
+        //   "title":"Stochastic Theories",
+        //   "route":"/blog"
+        // }
       ]
     }
   },
