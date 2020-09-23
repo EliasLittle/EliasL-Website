@@ -24,7 +24,7 @@
 
             <v-col xs="0" lg="3" class="d-none d-lg-flex">
                 <v-container>
-                    <v-img src="img/eliasHeadshot.jpg"/>
+                    <v-img src="img/eliasHeadshot.jpeg"/>
                 </v-container>
             </v-col>
 
