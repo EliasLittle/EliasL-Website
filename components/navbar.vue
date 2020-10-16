@@ -17,6 +17,9 @@
           <v-list-item v-for="item in menu" :key="item.title">
             <v-list-item-title><v-btn text :to="item.route" class="font-weight-light" nuxt>{{item.title}}</v-btn></v-list-item-title>
           </v-list-item>
+          <v-list-item>
+            <v-list-item-title><v-btn text class="font-weight-light" href="../../Resume.pdf" nuxt>Resume</v-btn></v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
     </div>
