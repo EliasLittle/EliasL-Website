@@ -25,6 +25,7 @@
         <v-btn text v-for="item in menu" :key="item.title" :to="item.route" class="font-weight-light" nuxt>
           {{item.title}}
         </v-btn>
+        <v-btn text class="font-weight-light" href="../../Resume.pdf" nuxt>Resume</v-btn>
     </v-toolbar-items>
 
   </v-app-bar>
