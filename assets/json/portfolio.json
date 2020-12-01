@@ -1,5 +1,12 @@
 [
     {
+      "title" : "Advent of Code",
+      "Subtitle" : "My solutions to the 2020 advent of code",
+      "logo" : "",
+      "link" : "/adventofcode.html",
+      "body" : "A notebook with all of my current solutions to the 2020 advent of code. I've been learning the Julia language recently, so I decided to solve these problems using Julia and Pluto notebooks."
+    },
+    {
       "title" : "Monte Carlo Credit",
       "subtitle" : "A Service that Recommends The Best Credit Card for You.",
       "logo" : "https://montecarlocredit.com/images/mcc.svg",
