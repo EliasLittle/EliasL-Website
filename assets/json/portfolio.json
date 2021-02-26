@@ -1,5 +1,12 @@
 [
     {
+      "title" : "The Marchenko Pastur Distribution",
+      "subtitle" : "From Understanding to Application",
+      "Logo" : "",
+      "link" : "/final_paper.pdf",
+      "body" : "My final paper from ENGRD 2700 Basic Engineering Probability and Statistics. I introduce what the Marchenko Pastor Distribution is, and then proceed to implement it both using generated data, and real-world data to get a sense of how it can be applied."
+    },
+    {
       "title" : "Advent of Code",
       "Subtitle" : "My solutions to the 2020 advent of code",
       "logo" : "",
