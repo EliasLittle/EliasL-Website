@@ -7,18 +7,18 @@
       "body" : "My final paper from ENGRD 2700 Basic Engineering Probability and Statistics. I introduce what the Marchenko Pastor Distribution is, and then proceed to implement it both using generated data, and real-world data to get a sense of how it can be applied."
     },
     {
-      "title" : "Advent of Code",
-      "Subtitle" : "My solutions to the 2020 advent of code",
-      "logo" : "",
-      "link" : "/adventofcode.html",
-      "body" : "A notebook with all of my current solutions to the 2020 advent of code. I've been learning the Julia language recently, so I decided to solve these problems using Julia and Pluto notebooks."
-    },
-    {
       "title" : "Monte Carlo Credit",
       "subtitle" : "A Service that Recommends The Best Credit Card for You.",
       "logo" : "https://montecarlocredit.com/images/mcc.svg",
       "link" : "https://montecarlocredit.com/",
       "body" : "An idea of mine that I built with my brother as a part of Astuary Developments during the summer of 2020. This service analyzes your spending habits and compares it to the rewards of a bunch of different credit cards in order to recommend the best one to you."
+    },
+    {
+      "title" : "Advent of Code",
+      "Subtitle" : "My solutions to the 2020 advent of code",
+      "logo" : "",
+      "link" : "/adventofcode.html",
+      "body" : "A notebook with all of my current solutions to the 2020 advent of code. I've been learning the Julia language recently, so I decided to solve these problems using Julia and Pluto notebooks."
     },
     {
         "title" : "Bright Future",
