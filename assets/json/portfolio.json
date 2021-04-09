@@ -14,6 +14,13 @@
       "body" : "An idea of mine that I built with my brother as a part of Astuary Developments during the summer of 2020. This service analyzes your spending habits and compares it to the rewards of a bunch of different credit cards in order to recommend the best one to you."
     },
     {
+      "title" : "An Alien & Film’s Guide to Thinking in Multiple Dimensions",
+      "subtitle" : "",
+      "Logo" : "",
+      "link" : "/Papers/Final%20",
+      "body" : "I discuss how the film Arrival based on The Story of Your Life by Ted Chiang makes an argument for another way to think. An essay where fiction, philosophy, and mathematics all coalesce."
+     },
+    {
       "title" : "Advent of Code",
       "Subtitle" : "My solutions to the 2020 advent of code",
       "logo" : "",
@@ -21,11 +28,11 @@
       "body" : "A notebook with all of my current solutions to the 2020 advent of code. I've been learning the Julia language recently, so I decided to solve these problems using Julia and Pluto notebooks."
     },
     {
-        "title" : "Bright Future",
-        "subtitle" : "A Site That Aggregates Positive News.",
-        "logo" : "https://brightfuture.news/images/search.svg",
-        "link" : "https://brightfuture.news/",
-        "body" : "A project of mine that I built with the help of my brother during the summer of 2020. The site scrapes a set of well-known news sites that we are continuing to add to, then uses natural language processing to analyze the positivity of each article, then presents the best ones in each category."
+      "title" : "Bright Future",
+      "subtitle" : "A Site That Aggregates Positive News.",
+      "logo" : "https://brightfuture.news/images/search.svg",
+      "link" : "https://brightfuture.news/",
+      "body" : "A project of mine that I built with the help of my brother during the summer of 2020. The site scrapes a set of well-known news sites that we are continuing to add to, then uses natural language processing to analyze the positivity of each article, then presents the best ones in each category."
     },
     {
         "title" : "Torzal Guitars",
@@ -38,7 +45,7 @@
         "title" : "The Application and Investigation of Lissajous Curves",
         "subtitle" : "By Elias Little & Alyssa Eckerman",
         "Logo" : "",
-        "link" : "/Papers/Lissajous%20Curves.pdf",
-        "body" : "The final paper I wrote with Alyssa Eckerman for our High School Multivariable Calculus class."
-      }
+        "link" : "/Papers/Final%20Essay%20ENGL1170.pdf",
+        "body" : "How ."
+     }
 ]
