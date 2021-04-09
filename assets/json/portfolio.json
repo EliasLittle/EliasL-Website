@@ -3,7 +3,7 @@
       "title" : "The Marchenko Pastur Distribution",
       "subtitle" : "From Understanding to Application",
       "Logo" : "",
-      "link" : "/final_paper.pdf",
+      "link" : "/Papers/final_paper.pdf",
       "body" : "My final paper from ENGRD 2700 Basic Engineering Probability and Statistics. I introduce what the Marchenko Pastor Distribution is, and then proceed to implement it both using generated data, and real-world data to get a sense of how it can be applied."
     },
     {
@@ -33,5 +33,12 @@
         "logo" : "https://torzalguitars.com/image/logo.png",
         "link" : "https://torzalguitars.com",
         "body" : "A family business, I help with various aspects of the business from merch, to business decisions. Available"
-    }
+    },
+    {
+        "title" : "The Application and Investigation of Lissajous Curves",
+        "subtitle" : "By Elias Little & Alyssa Eckerman",
+        "Logo" : "",
+        "link" : "/Papers/Lissajous%20Curves.pdf",
+        "body" : "The final paper I wrote with Alyssa Eckerman for our High School Multivariable Calculus class."
+      }
 ]
