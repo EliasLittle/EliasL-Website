@@ -1,0 +1,1411 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='file:///Users/eliaslittle/Library/Application Support/abnerworks.Typora/themes/night/mermaid.dark.css' rel='stylesheet' type='text/css' /><link href='file:///Users/eliaslittle/Library/Application Support/abnerworks.Typora/themes/night/codeblock.dark.css' rel='stylesheet' type='text/css' /><link href='file:///Users/eliaslittle/Library/Application Support/abnerworks.Typora/themes/night/sourcemode.dark.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 1;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style><title>The Consumption of Modern Meme Culture - Draft</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='the-consumption-of-modern-meme-culture'><span>The Consumption of Modern Meme Culture</span></h1><h2 id='introduction'><span>Introduction</span><span>	</span></h2><p><span>	</span><span>No cultural movement better represents millenials and generation z, than the meme. They are synonymous with the younger generations. Memes have infiltrated every part of life from simple jokes with friends, to commentary on global events, to the stock market, and cover anything from the pandemic to </span><a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'><span>Rick Astley</span></a><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span> to Doge</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span>, a Japanese dog. But what exactly </span><em><span>is</span></em><span> a meme? The generic answer is simply an image with some sort of accompanying text that is usually meant to be funny. Reddit&#39;s r/memes subreddit describes them as &quot;a way of describing cultural information being shared. An element of a culture or system of behavior that may be considered to be passed from one individual to another by nongenetic means, especially imitation.&quot; But we have to look back to 1976 to Richard Dawkins book </span><em><span>The Selfish Gene</span></em><span> to see the first definition of a meme: a noun that &quot;conveys the idea of a unit of cultural transmission, or a unit of </span><em><span>imitation</span></em><span>.&quot; They are essentially a pocket of cultural information that is shared between people. One important distinction to make is that when most people think of what a meme is, they imagine in being humorous in nature, but they don&#39;t have to be. A good example of this is one of the earliest human memes: fire is dangerous. From the Wiley-Blackwell-ICA International Encyclopedias of Communication mentions that &quot;teaching a child not to play with fire is an attempt at transferring a meme to the child&quot; (Oleson</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup><span>). Another important distinction is that there is no set size of a meme, usually they&#39;re short but they don&#39;t have to be. Professor Susan J. Blackmore</span><sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup><span> brings up Beethoven&#39;s 5th Symphony, and particularly the </span><a href='https://www.youtube.com/watch?v=fOk8Tm815lE'><span>first four notes</span></a><span>, as a good example of the flexibility of memes (Blackmore 53). She argues that both the openning four notes, and the entire symphony are memes.</span></p><h4 id='with-great-internet-comes-great-speed'><span>With Great Internet Comes Great Speed</span></h4><p><span>	</span><span>These two examples also demonstrate a key characteristic of modern meme consumption: </span><em><span>speed</span></em><span>. The meme of how to create fire, and that it is dangerous (which I will refer to as the &#39;fire&#39; memes</span><sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup><span>), which first occured around 1,000,000 years ago, took hundreds of thousands of years to spread across the world. By the time Beethoven&#39;s 5th Symphony debuted in 1808, it probably still took many years for it to reach far parts of the world. In the early 19th century, people could certainly reach most parts of the world within a matter of months, but the only way to transport the music was to either bring sheet music along and find an orchestra to play it in the new location, or bring the musicians yourself, neither of which was easy then. But nowadays with the internet, memes are shared practically everywhere on Earth, near instantaneously. This change in the transmission speed of memes has fundementally changed our culture, and I think we&#39;re only just starting to see the effects.</span></p><h2 id='memotions'><span>Memotions</span></h2><p><span>	</span><span>One of the biggest underlying changes in our society as a result of instant meme tranmission, is how we interact socially. As a quintessential part of teen culture, memes are used for sharing all sorts of information. Although most memes are meant to be funny, they are often disguising other much more complicated emotions as comedy in order to more easily digest the content. Jennifer L.W. Fink wrote that &quot;When [she] learned (on Facebook) that </span><a href='https://www.nytimes.com/2020/01/02/world/middleeast/qassem-soleimani-iraq-iran-attack.html'><span>an American drone attack killed Maj. Gen. Qassim Suleimani</span></a><span>, the powerful Iranian commander, [her] stomach dropped. Having been married to a Marine deployed in the gulf war in the 1990s, [she knows] that war is no joke. [Her] sons came home from school that day laughing at World War III memes&quot; (Fink</span><sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup><span>). She goes on to explain that &quot;kids use memes to express and channel all kinds of emotions, including fear,&quot; and I can corroborate this exact scenario. When this happened I too saw plenty of Wordl War III, and I was legitemately afraid that we might be headed into another war, but it was much easier to talk about it under the guise of comedy. Fink continues to emphasize that &quot;It&#39;s O.K. to Show Emotions&quot; referencing that &quot;boys, especially, feel a lot of societal pressure to appear strong, stoic and unconcerned&quot; and while this is true, and comedic memes are often used as a proxy, I don&#39;t think this is the most common case. In </span><em><span>The Managed Heart: Commercialization of Human Feeling</span></em><sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup><span>, Hochschild describes just how taxing emotional labor can be, which is why I argiue most popular internet memes are funny: it reduces the emotional toll on the person reading. There are so many emotionally heavy things we have to deal with on a daily basis its much easire to go about life without having to deal with the full emotions of everything. Rates of anxiety and depression is becoming increasingly common among teens, with about 13% of teens reporting to have &quot;experienced at least one major depressive episode in the past year, up from 8% in 2007&quot; according to Pew Research</span><sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup><span>. The need to offload these intense emotions is often left up to comedic memes. For example, the following </span><a href='https://www.reddit.com/r/memes/comments/neffg5/thanks_a_lot_brain/'><span>meme</span></a><span> is the most upvoted meme on r/memes for the day of writing this, with ~152k upvotes.</span></p><center>
+<figure>
+<img src="https://preview.redd.it/69g5axregoz61.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=b1e9a1a9dc332329696af41b14ebfee1eaed3d25" alt="Meme" width="40%">
+  <figcaption>Top meme from r/memes on May 17th, 2021</figcaption>
+</figure>
+</center><p><span>This meme is clearly about always remembering negative experiences while failing to remember positive ones. This is a really serious topic, and rather sad that this is such a popular meme. But I think it perfectly highlights my point that its much easier to find solace with others over shared struggles through comedic means than through serious discussions that demand extremely high emotional labor costs. At the time of writing the article, Fink&#39;s boys were 14, 16, 19, and 22 and the oldest two would likely be drafted if WW III were to happen, so they had legitimate reason for worry, all because of one story in the news. It much easier to laugh this off and continue with your day then stop and acknowledge the full emotional weight of the situation.</span></p><h4 id='new-ways-to-socialize'><span>New Ways to Socialize</span></h4><p><span>	</span><span>This isn&#39;t the only major social impact of memes however. Another trend is simply the exchange of memes between friends. Sending memes back and forth nowadays is a common way friends stay in touch, and even spend time hanging out together. It is not an  uncommon sight to see friends sitting on a coach scrolling through memes on their phones sending them to each other as a method of socializing. Instead of riding around the neighborhood on bikes, or going shopping, or playing games, you&#39;ll find friends sending memes to each other. It can be a great way to share some laughs, or have an interesting discussion on a current trend, or sympathize over a shared struggle. Because of the digital nature of internet memes, friends can also be separated by thousands of miles and in completely different time zones and still easily share memes. This also has a really big impact on consumption, as the only thing you need to browse and share memes is a connection to the internet, which most people in developed countries have anyways for work, school, and other purposes. Instead of having to spend money at the mall, or buying sports equipment, or movie tickets, you can simply share memes. Obviously this won&#39;t replace all other forms of socializing, but it is certainly becoming a more common alternative.</span></p><h2 id='cultural-values-exchange'><span>Cultural Values Exchange</span></h2><p><span>	</span><span>These social changes also have further implications to our culture more generally. Because of the speed of exchange, and new ways in which people socialize through memes, general cultural values are also shared far and wide. Many memes are used to sympathize with others, often over shared struggles as I mentioned above, but another common use is for projecting your values out into the world. This also covers a wide variety of topics. Two very different examples include Spotify Wrapped, and Black Lives Matter. First, we&#39;ll address Spotify Wrapped</span><sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup><span>. Annually at the end of the year, for the past few years, Spotify releases some statistics about your individual listening habits. Usually this includes how many minutes you listened to Spotify that year and what your top artists and gengres were, among other statistics. At the end of their little presentation they also provide really succinct graphics that are meant to be shared on social media. Consequently, every year when its released there is a flood of people sharing their Wrapped statistics. While you might find some people that share your favorite artists, or genres, more often than not that&#39;s not why people share it. They usually want to showcase their own statistics, their own </span><em><span>values</span></em><span>. People are more interested in projecting their values into the world, rather than looking for people to sympathize with them. This is a pretty simple, self-oriented example though. A far more interesting example is that of </span><a href='https://en.wikipedia.org/wiki/Internet_activism'><span>internet activism</span></a><span>. </span></p><h4 id='internet-activism'><span>Internet Activism</span></h4><p><span>		</span><span>In &quot;Born to Shop? Consumer History and American History,&quot; Glickman</span><sup class='md-footnote'><a href='#dfref-footnote-10' name='ref-footnote-10'>10</a></sup><span> covers the history of American consumer culture, and how the rise in boycott&#39;s lead to much of activism happening through consumer choices. Such as the notorious grape boycotts when &quot;agricultural workers urged middle-class consumers to refrain from purchasing grapes, so long as growers resisted union organizing campaigns and industry conditions remained dangerous&quot; (6). Today, activism through consumer consumer culture is more present than ever thanks to internet activism, but it is no longer dependent on direct consumer choices, but rather social ones: which memes you share. Internet activism takes on a lot of different forms, but the most common, and most easily recognizable as memes, are short infographics and hashtags. Although they are everpresent nowadays, they surged in popularity the summer of 2020 particularly with the Black Lives Matter movement and protests. Terry Nguyen with Vox</span><sup class='md-footnote'><a href='#dfref-footnote-11' name='ref-footnote-11'>11</a></sup><span> described these activism focused infographic memes as &quot;PowerPoint activism.&quot; Some of the graphics they share can be seen here, and immediately you will notice the interesting use of eye-catching design and unique aethstetics. </span></p><center><div height="100%">
+<iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CBno6H2pEox/embed/?cr=1&amp;v=12&amp;wp=726&amp;rd=https%3A%2F%2Fwww.vox.com&amp;rp=%2Fthe-goods%2F21359098%2Fsocial-justice-slideshows-instagram-activism#%7B%22ci%22%3A0%2C%22os%22%3A1445.670000044629%2C%22ls%22%3A1236.269999993965%2C%22le%22%3A1238.6100001167506%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="540" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: white; max-width: 658px; width: calc(30% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;" align="left"></iframe><iframe class="instagram-media instagram-media-rendered" id="instagram-embed-2" src="https://www.instagram.com/p/CDL1waEnkGP/embed/?cr=1&amp;v=12&amp;wp=1316&amp;rd=https%3A%2F%2Fwww.vox.com&amp;rp=%2Fthe-goods%2F21359098%2Fsocial-justice-slideshows-instagram-activism#%7B%22ci%22%3A2%2C%22os%22%3A1086.2900000065565%2C%22ls%22%3A873.5750000923872%2C%22le%22%3A875.2000001259148%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="540" data-instgrm-payload-id="instagram-media-payload-2" scrolling="no" style="background: white; max-width: 658px; width: calc(30% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;" align="right"></iframe></div></center><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p><span>While most people primarily use these types of posts to share values they find important, that&#39;s not always the case. #BlackoutTuesday took place on June 2, 2020, which was initially meant as a protest against racism and police brutality in response to the killings of George Floyd, Ahmaud Arbery, and Breonna Taylor. Many users on Facebook and instagram took part by posting a black square usually accompanied by either #BlackoutTuesday, #BlackLivesMatter, or #BLM. </span></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Solid_black.svg/1280px-Solid_black.svg.png" alt="img" style="zoom: 20%;" /></p><p><span>While many people meant this sincerely, many others were merely performative activists posting this without otherwise participating in the protests, or donating, or doing anything else to contribute. This is also an example of virtue signalling (which itself deserves an entire essay). Virtue signalling in essence is sharing memes not for the actual content of the meme, but because of what sharing the meme says about the person who shared it. </span></p><p><span>The posts that aren&#39;t performative activism still have their own issues though. These types of aethstetic designs are really popular on Instagram, and are often shared widely. Sometimes far more than expected, as Nguyen reports &quot;a popular mini-guide on using </span><a href='https://www.instagram.com/p/CDFLe7PHPfK/'><span>trans-inclusive language</span></a><span> with over 43,000 “likes” was created by a user with only 1,200 followers.&quot; While many of these accounts and posts are truly trying to spread awareness and help certain causes it has spread beyond that. Nguyen goes on to explain that &quot;the problem is, the format of the mini slideshow has become so ubiquitous that independent creators are using them as a creative outlet, a political megaphone, or a means to build their brand.&quot; This particular style has become a meme of itself, mutating from genuinely trying to gain attention for political or humanitarian causes to using it to promote one&#39;s own work. Nguyen brings up the streetwear brand </span>[<span>CHNGE</span>][chnge.com]<span>, and explains</span></p><blockquote><p><span>Its Instagram page emulates that of a progressive advocacy organization, with posts on allyship, police defunding, </span><a href='https://www.instagram.com/p/CDWbqKqgEY8/'><span>climate change</span></a><span>, and </span><a href='https://www.instagram.com/p/CDff2g5gEnk/'><span>international issues</span></a><span>. And while the brand only appears to be selling social justice-adjacent, Black Lives Matter apparel for donations to the movement, it’s a telling sign of the steady corporatization of progressive politics&quot;</span></p></blockquote><p><span>What was originally a meme meant to allow people to actively share their values on important causes, warped into a meme for promoting people&#39;s own business.</span></p><h4 id='the-separation-of-values-from-products'><span>The Separation of Values from Products</span></h4><p><span>	</span><span>Goodman-Cohen&#39;s &quot;The Contradictions of Consumer Culture&quot;</span><sup class='md-footnote'><a href='#dfref-footnote-12' name='ref-footnote-12'>12</a></sup><span> discusses the change of consumer culture and how it changed from strictly about physical goods to being more and more about social ideas. The social meaning of products became increasingly important over the course of the 20th century. Which car you drove, clothes you wore, foods you ate, art you appreciated and much more all had serious implications with your social status. For example, in &quot;Can &#39;Taste&#39; Be Separated from Social Class?&quot;</span><sup class='md-footnote'><a href='#dfref-footnote-13' name='ref-footnote-13'>13</a></sup><span> Finn describes how &quot;poorer people tended to prefer &#39;lowbrow&#39; things, middle class people liked &#39;middlebrow&#39; things, and rich people liked &#39;highbrow&#39; things&quot; (87).  Although Finn was focused on food, this holds true for many areas of life. Your social identity was primarily a manifestation of your consumer choices. Goodman and Cohen also outline four stages of economic consumption with the fourth and last being the consumer acting &quot;as a so­cial agent involved in complex ways with fashion trends, social competition, and emulation&quot; (29). Consumer and social choices were one in the same, what you purchase defines your social status, and vise versa. That being said, I think we&#39;re entering a fifth stage of consumption, one where your social status isn&#39;t coupled to your consumer choices, but rather one where the social act of sharing cultural values through memes influence both your social status and your consumption separately. </span></p><p><span>	</span><span>Goodman and Cohen said that &quot;only consumers are in touch with the never-entirely rational social processes that are at the center of our economic system.&quot; I think this still completely holds true, but I its now the social process of exchanging memes, not the social practice of consuming that drives our economic system. Your social status is often determined to some degree by what memes, and thus cultural values, you share. This is one reason that virtue signalling has become so important over the past few years; people feel pressured to share certain memes that they might not believe in, in order to fit into a certain social class. What memes people see also impacts their consumption habits, but its the memes and not the consumption itself that affects people&#39;s social class.</span></p><h2 id='capitalist-meme-consumption'><span>Capitalist Meme Consumption</span></h2><p><span>	</span><span>Although I argue that consumption no longer drives social class or sharing cultural values, it is still driven by them and more so than ever. Despite many values being exchanged without the need to purchase items, this doesn&#39;t mean we&#39;re buying fewer things. There are countless examples of memes driving consumption. Some noteable ones include @Doggface280&#39;s rendition of Fleetwood Mac&#39;s &quot;Dreams&quot;</span><sup class='md-footnote'><a href='#dfref-footnote-14' name='ref-footnote-14'>14</a></sup><span>, Dogecoin</span><sup class='md-footnote'><a href='#dfref-footnote-15' name='ref-footnote-15'>15</a></sup><span>, and the return of Szechuan sauce</span><sup class='md-footnote'><a href='#dfref-footnote-16' name='ref-footnote-16'>16</a></sup><span> at McDonalds thanks to a popular episode of </span><a href='https://en.wikipedia.org/wiki/Rick_and_Morty'><span>Rick and Morty</span></a><span>. Doggface280&#39;s TikTok, which gained over 80 million views on TikTok alone, caused stores all across the country to completely sell out of cranberry juice and caused the 1977 song to reenter the Billboard Top 10. Dogecoin, a cryptocurrency based on the Doge meme mentioned earlier, was created as a joke to begin with, but currently has a market capitalization of around </span><span>$</span><span>70 Billion dollars making it roughly equal in value to Capital One, one of America&#39;s biggest banks. Let me repeat that, a digital currency created as a meme to begin with is worth more than one of the largest banks in America (and thus the world)! If you haven&#39;t been convinced that memes play an important role in todays consumer culture, you ought to be now. The recent rise in popularity of NFTs also provided an outlet for people to outright purchase the rights to original memes. For example, a Nyan Can</span><sup class='md-footnote'><a href='#dfref-footnote-17' name='ref-footnote-17'>17</a></sup><span> NFT sold for 300 ETH (another cryptocurrency), which at the time was worth nearly </span><span>$</span><span>600,000 USD and is now worth nearly </span><span>$</span><span>1,000,000 USD. The Disaster Girl</span><sup class='md-footnote'><a href='#dfref-footnote-18' name='ref-footnote-18'>18</a></sup><span> meme was also sold as an NFT for 180 ETH.</span></p><p><span>	</span><span>In addition to being bought and sold either as a cryptocurrency like Dogecoin, or as NFTs, memes are more often used as a form of marketing. The type and goal of marketing can vary wildly though. There are two classes of product focused memes, the first being &#39;naturally occurring&#39; memes, and the second being &#39;corporate&#39; memes. &#39;Naturally occurring&#39; memes are simply made by everyday people and might feature a particular product for the sake of the joke. Some examples include airpod memes, particularly people getting them for christmas,</span><sup class='md-footnote'><a href='#dfref-footnote-19' name='ref-footnote-19'>19</a></sup><span> and Oreo grammar memes.</span><sup class='md-footnote'><a href='#dfref-footnote-20' name='ref-footnote-20'>20</a></sup><span> These weren&#39;t created by the companies that they promote, and yet they are fantastic free marketing for them. &#39;Corporate&#39; memes on the other hand, are created by companies specifically to market their products. Netflix notoriously makes and shares their own memes regarding their shows, and they are often well received despite a bias against corporate memes. Here is a recent Netflix meme regarding one of their current original shows:</span></p><blockquote class="twitter-tweet" max-width="40%" text-align="center" width="auto" display="table" float="center"><p lang="en" dir="ltr">Woman in the Window has Amy Adams playing a character who hasn’t left her house in 10 months and it’s far too relatable after the last year <a href="https://t.co/EFQ7ASuEvB">pic.twitter.com/EFQ7ASuEvB</a></p>— Netflix (@netflix) <a href="https://twitter.com/netflix/status/1393265163902492674?ref_src=twsrc%5Etfw">May 14, 2021</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p><span>Not all corporate memes are as successful as Netflix&#39;s though. Corporate memes already have a bias against them, because its obvious to most people that the point of the meme is not to share some sentiment or cultural value, but rather to get you to purchase their product, which certainly limits their capacity to go viral. This McDonalds meme for example completely disregards the format of the meme its trying to co-opt, the Say No More Fam meme.</span><sup class='md-footnote'><a href='#dfref-footnote-21' name='ref-footnote-21'>21</a></sup><span> (The McDonalds meme is over 2 years older than the Netflix one, which explains why it has more likes despite certainly being less well-received).</span></p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Him: Meet me at McDonald's?<br>Barber: Say no more, fam. <a href="https://t.co/Up7lkDqwPq">pic.twitter.com/Up7lkDqwPq</a></p>— McDonald's UK (@McDonaldsUK) <a href="https://twitter.com/McDonaldsUK/status/966643448689328129?ref_src=twsrc%5Etfw">February 22, 2018</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p><span>Some meme&#39;s are also specifically meant criticize a company, or the government. These are often akin to a modern take on a political comic. Often they will take one of the companies products, or a company policy, or even endorsement they have made, and be sarcastic about the idea. This meme about corporate bailouts exemplifies this well:</span></p><p><img src="https://static.boredpanda.com/blog/wp-content/uploads/2020/03/corporates-being-jerks-corona-memes-104-5e82fcf08f253__700.jpg" alt="Pretty Much" style="zoom:50%;" /></p><p><span>This particular meme highlights the hypocritical nature of many large corporations which always incentivize their own profits and tries to use every loop-hole to avoid paying taxes, but when they need help they look to the government (and thus taxpayers) to bail them out. Memes like this are also quite popular because of the populist nature of both memes generally and the content, people far out number large corporations, and have more of an ability to spread the meme around. This populist nature is what gives memes their dominant marketing power, and why they play such an important role in how people interact with companies and products today.</span></p><h2 id='conclusion-change-subtitle'><span>Conclusion (change subtitle)</span></h2><p><span>	</span><span>Glickman further describes in &quot;Born to Shop?&quot; how we &quot;[scorn] companies that produce goods with cheap labor abroad and sweat shop labor at home, [and] many critics have been led to call for a revival of consumer responsibility&quot; (7). As consumers, we historically have often spread our ideas and values through the products we buy and companies we endorse. And that when we consumer products, we&#39;re not just consuming the product, but also the ideas and values associated with it. Now, however, these are more separated. We often consume to some degree many ideas and values associated with products without having to actually purchase the products themselves. We are free to share many of the associated memes without having to consume the product personally. This also means that calls for consumer responsibility are in everyone&#39;s hands now, not just the critics as Glickman said. </span></p><p><span>	</span><span>Memes are changing the way we interact. From how teens interact with friends and deal with emotionally heavy topics, to how activists push their message, to which companies to support and which products to buy, memes make it easier than ever to share what cultural values we hold most dear. We also are no longer as dependent on having to use our consumer choices as an intermediary for sharing those values or in order to fit into a specific social class. And yet, the influence of memes means that we are still consuming more than ever before.</span></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <a href="https://knowyourmeme.com/memes/rickroll"><img src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif"></img></a> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <a href="https://knowyourmeme.com/memes/doge"><img src="https://i.kym-cdn.com/photos/images/newsfeed/000/581/722/7bc.jpg" alt="ow so scare you doing Concern keep ur hands ay from me Shiba Inu dog dog like mammal dog breed dog breed group shiba inu" style="zoom:67%;" /></a> <a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <a href='https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118766804.wbiect026'><span>Wiley Communications Encyclopedia: Meme</span></a> <a name='dfref-footnote-3' href='#ref-footnote-3' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> <a href='https://en.wikipedia.org/wiki/Susan_Blackmore'><span>Blackmore, Susan J.</span></a><span> (1999), </span><em><span>The meme machine</span></em><span>, Oxford [Oxfordshire]: Oxford University Press, p. 288, </span><a href='https://en.wikipedia.org/wiki/ISBN_(identifier)'><span>ISBN</span></a><span> </span><a href='https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-850365-1'><span>978-0-19-850365-1</span></a> <a name='dfref-footnote-4' href='#ref-footnote-4' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> <span>The &#39;fire&#39; memes are distinct from the phrase &#39;fire memes&#39; which is itself a meme</span> <a name='dfref-footnote-5' href='#ref-footnote-5' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> <a href='https://www.nytimes.com/2020/02/06/well/family/memes-teens-coronavirus-wwiii-parents.html'><span>NYTimes: The Role of Memes in Teen Culture</span></a> <a name='dfref-footnote-6' href='#ref-footnote-6' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>7</span> <span>Hochschild</span> <a name='dfref-footnote-7' href='#ref-footnote-7' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>8</span> <a href='https://www.pewresearch.org/fact-tank/2019/07/12/a-growing-number-of-american-teenagers-particularly-girls-are-facing-depression/'><span>Pew Research on Teenage Depression</span></a> <a name='dfref-footnote-8' href='#ref-footnote-8' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>9</span> <img src="https://techcrunch.com/wp-content/uploads/2020/12/Summary-share-cards.png?w=730&crop=1" alt="Spotify launches '2020 Wrapped' with new features including quizzes, badges  and, yes, stories | TechCrunch" style="zoom:50%;" /> <a name='dfref-footnote-9' href='#ref-footnote-9' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>10</span> <span>Glickman</span> <a name='dfref-footnote-10' href='#ref-footnote-10' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>11</span> <a href='https://www.vox.com/the-goods/21359098/social-justice-slideshows-instagram-activism'><span>Part of Vox&#39;s &quot;The Goods&quot; publication focused on consumer culture.</span></a> <a name='dfref-footnote-11' href='#ref-footnote-11' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>12</span> <span>Goodman-Cohen</span> <a name='dfref-footnote-12' href='#ref-footnote-12' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>13</span> <span>Finn</span> <a name='dfref-footnote-13' href='#ref-footnote-13' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>14</span> <a href="https://knowyourmeme.com/memes/people/doggface208"><img src="/Users/eliaslittle/Downloads/2a0bdb75b9b0ede5917011b1439b9bf1.gif" referrerpolicy="no-referrer" alt="2a0bdb75b9b0ede5917011b1439b9bf1"></a> <a name='dfref-footnote-14' href='#ref-footnote-14' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>15</span> <a href="https://knowyourmeme.com/memes/dogecoin"><img src="https://i.kym-cdn.com/entries/icons/original/000/014/710/dodge-coin-649x365.jpg" alt="Dogecoin with a picture of Doge" style="zoom:50%;" /></a> <a name='dfref-footnote-15' href='#ref-footnote-15' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>16</span> <a href ="https://knowyourmeme.com/memes/mcdonalds-mulan-szechuan-sauce"><img src="https://i.kym-cdn.com/entries/icons/original/000/022/604/rickmort.jpg" alt="McDonald's Mulan Szechuan Sauce" style="zoom:20%;" /></a> <a name='dfref-footnote-16' href='#ref-footnote-16' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>17</span> <a href="https://knowyourmeme.com/memes/nyan-cat"><img src="https://media0.giphy.com/media/sIIhZliB2McAo/giphy.gif?cid=ecf05e47xkx6ly7ahte4qumaud4ibgnqte68ihgu7kugwgye&amp;rid=giphy.gif&amp;ct=g" referrerpolicy="no-referrer" alt="Nyan Cat GIF"></a> <a name='dfref-footnote-17' href='#ref-footnote-17' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>18</span> <a href="https://knowyourmeme.com/memes/disaster-girl"><img src="https://static01.nyt.com/images/2021/04/30/multimedia/30xp-meme/29xp-meme-articleLarge-v3.jpg?quality=75&auto=webp&disable=upscale" alt="&ldquo;Disaster Girl&rdquo;" style="zoom:50%;" /></a> <a name='dfref-footnote-18' href='#ref-footnote-18' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>19</span> <img src="https://ppcprotect.com/static/d127cdd322f40ef7b96c97776071a17e/88df8/airpod-meme.jpg" alt="airpod marketing meme" style="zoom:40%;" /> <a name='dfref-footnote-19' href='#ref-footnote-19' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>20</span> <img src="https://i.kym-cdn.com/entries/icons/original/000/033/708/cover4.jpg" alt="Oreo cookie grammar where the cookie part is represented by &quot;o&quot; and the cream filling is represented by &quot;re&quot;" style="zoom:50%;" /> <a name='dfref-footnote-20' href='#ref-footnote-20' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>21</span> <img src="https://i.kym-cdn.com/photos/images/newsfeed/000/920/786/f8e.jpg" alt="Barber: &quot;what do you want?&quot; Him: &quot;ahh give me that Squilliam Fancyson. Barber: &quot;say no more fam.&quot; G. BarberMemes face facial expression nose text forehead chin head cheek human behavior jaw" style="zoom:50%;" /> <a name='dfref-footnote-21' href='#ref-footnote-21' title='back to document' class='reversefootnote' >↩</a></div></div></div></div>
+</body>
+</html>
