@@ -1,0 +1,630 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style><title>Consumption of Modern Meme Culture - Final Draft</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='consumption-of-modern-meme-culture'><span>Consumption of Modern Meme Culture</span></h1><h2 id='introduction'><span>Introduction</span><span>	</span></h2><p><span>	</span><span>No cultural movement better represents millennials and Generation Z, than the meme. They are synonymous with the younger generations. Memes have infiltrated every part of life from simple jokes with friends, to commentary on global events, to the stock market, and cover anything from the pandemic to</span><a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'><span> Rick Astley</span></a><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span> to Doge</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span>, a Japanese dog. But what exactly </span><em><span>is</span></em><span> a meme? The generic answer is simply an image with some sort of accompanying text that is usually meant to be funny. Reddit&#39;s memes subreddit describes them as </span></p><blockquote><p><span>a way of describing cultural information being shared. An element of a culture or system of behavior that may be considered to be passed from one individual to another by nongenetic means, especially imitation. </span></p></blockquote><p><span>But we have to look back to 1976 to Richard Dawkins book </span><em><span>The Selfish Gene</span></em><span> to see the first definition of a meme: a noun that &quot;conveys the idea of a unit of cultural transmission, or a unit of </span><em><span>imitation</span></em><span>.&quot; They are essentially a pocket of cultural information that is shared between people. </span></p><p><span>	</span><span>One important distinction to make is that when most people think of what a meme is, they imagine in being humorous in nature, but they don&#39;t have to be. A good example of this is one of the earliest human memes: fire is dangerous. From the Wiley-Blackwell-ICA International Encyclopedias of Communication mentions that &quot;teaching a child not to play with fire is an attempt at transferring a meme to the child&quot; (Oleson</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup><span>). Another important distinction is that there is no set size of a meme, usually they&#39;re short but they don&#39;t have to be. Professor Susan J. Blackmore</span><sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup><span> brings up Beethoven&#39;s 5th Symphony, and particularly the</span><a href='https://www.youtube.com/watch?v=fOk8Tm815lE'><span> first four notes</span></a><span>, as a good example of the flexibility of memes (Blackmore 53). She argues that both the opening four notes, and the entire symphony are memes.</span></p><h4 id='with-great-internet-comes-great-speed'><span>With Great Internet Comes Great Speed</span></h4><p><span>	</span><span>These examples also demonstrate a key characteristic of modern meme consumption: </span><em><span>speed</span></em><span>. The meme of how to create fire, and that it is dangerous (which I will refer to as the &#39;fire&#39; memes</span><sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup><span>), which first occurred around 1,000,000 years ago, took hundreds of thousands of years to spread across the world. Farming was first invented roughly 10,000 years ago, and managed to reach most parts of the world after about 5,000-6,000 years, magnitudes faster than fire, but still a snail&#39;s pace by today&#39;s standards (Blackmore 26). By the time Beethoven&#39;s 5th Symphony debuted in 1808, it probably took several years for it to reach far parts of the world. In the early 19th century, people could certainly reach most parts of the world within a matter of months, but the only way to transport the music was to either bring sheet music along and find an orchestra to play it in the new location, or bring the musicians yourself, neither of which was easy then. But nowadays, with the internet, memes are shared practically everywhere on Earth, nearly instantaneously. This change in the transmission speed of memes has fundamentally changed our culture, and we&#39;re only just starting to see the effects.</span></p><p>&nbsp;</p><h2 id='memotions'><span>Memotions</span></h2><p><span>	</span><span>One of the biggest underlying changes in our society as a result of instant meme transmission, is how we interact socially. As a quintessential part of teen culture, memes are used for sharing all sorts of information. Although most memes are meant to be humorous, they are often disguising other much more complicated emotions as comedy in order to more easily digest the content. Jennifer L.W. Fink wrote that </span></p><blockquote><p><span>When [she] learned (on Facebook) that</span><a href='https://www.nytimes.com/2020/01/02/world/middleeast/qassem-soleimani-iraq-iran-attack.html'><span> an American drone attack killed Maj. Gen. Qassim Suleimani</span></a><span>, the powerful Iranian commander, [her] stomach dropped. Having been married to a Marine deployed in the gulf war in the 1990s, [she knows] that war is no joke. [Her] sons came home from school that day laughing at World War III memes (Fink</span><sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup><span>). </span></p></blockquote><p><span>She goes on to explain that &quot;kids use memes to express and channel all kinds of emotions, including fear,&quot; and I can corroborate this exact scenario. When this happened Reddit’s meme subreddit was flooded with World War III memes in response, and many teenagers genuinely believed that the US could be headed into another war, but it was much easier to talk about it under the guise of comedy. Fink continues to emphasize that &quot;It&#39;s O.K. to Show Emotions&quot; referencing that &quot;boys, especially, feel a lot of societal pressure to appear strong, stoic and unconcerned.&quot; While this is true, and comedic memes are often used as a proxy, I don&#39;t think this is the most common case. </span></p><p><span>	</span><span>In </span><em><span>The Managed Heart: Commercialization of Human Feeling</span></em><sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup><span>, Hochschild describes just how taxing emotional labor can be, which is why most popular internet memes are funny: it reduces the emotional toll on the person reading. Hochschild describes how &quot;the [flight attendants] ... often spoke of their smiles as being </span><em><span>on</span></em><span> them but not </span><em><span>of</span></em><span> them&quot; and how this is a perfect example of emotional labor because they are essentially forced to display a particular emotion (Hochschild 8). If people didn&#39;t turn these serious news stories into something to laugh about then they would be forced into dealing with a negative emotion, which is much harder than laughing, even if it is slightly coerced. There are so many emotionally heavy things we have to deal with on a daily basis it&#39;s much easier to go about life without having to deal with the full emotions of everything. It&#39;s also important to note that Hochschild makes a distinction between emotional labor and work whereEmotional labor [means] the management of feeling to create a publicly observable facial and bodily display; emotional labor is sold for a wage and therefore has exchange value. I use the synonymous terms emotion work or emotion management to refer to these same acts done in a private context where they have use value (Hochschild 7). Dealing with the emotions of memes is almost always emotional work, not labor. But that doesn&#39;t make it any less demanding. Rates of anxiety and depression are becoming increasingly common among teens, with about 13% of teens reporting to have &quot;experienced at least one major depressive episode in the past year, up from 8% in 2007&quot; according to Pew Research</span><sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup><span>. The need to offload these intense emotions is often left up to comedic memes. For example, the following</span><a href='https://www.reddit.com/r/memes/comments/neffg5/thanks_a_lot_brain/'><span> meme</span></a><span> is the most upvoted meme on r/memes for the day of writing this.</span></p><iframe id="reddit-embed" src="https://www.redditmedia.com/r/memes/comments/neffg5/thanks_a_lot_brain/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="527" width="640" scrolling="no"></iframe><p><span>This meme is clearly about always remembering negative experiences while failing to remember positive ones. It’s rather sad that this is such a popular meme, as it’s a genuinely serious topic. At the time of writing the article, Fink&#39;s boys were 14, 16, 19, and 22 and the oldest two would likely be drafted if WWIII were to happen, so they had legitimate reason for worry, all because of one story in the news. It’s much easier to laugh this off and continue with your day then stop and acknowledge the full emotional weight of the situation.</span></p><h4 id='a-new-way-to-socialize'><span>A New Way to Socialize</span></h4><p><span>	</span><span>This isn&#39;t the only major social impact of memes, however. Another trend is simply the exchange of memes between friends. Sending memes back and forth nowadays is a common way friends stay in touch, and even spend time hanging out together. It is not an uncommon sight to see friends sitting on a couch scrolling through memes on their phones. Instead of riding around the neighborhood on bikes, or going shopping, or playing games, looking at memes can serve as a substitute for social interaction. It can be a great way to share some laughs, or have an interesting discussion on a current trend, or sympathize over a shared struggle. Because of the digital nature of internet memes, this can also work from afar. This also has a big impact on consumption, as the only thing you need to browse and share memes is a connection to the internet, which most people in developed countries have anyways for work, school, and other purposes. Instead of having to spend money at the mall, or buying sports equipment, or movie tickets, you can share memes. Obviously, this won&#39;t replace all forms of socializing, but it’s certainly becoming a viable alternative.</span></p><h2 id='cultural-values-exchange'><span>Cultural Values Exchange</span></h2><p><span>	</span><span>These social changes also have further implications on our culture more generally. Many memes are used to sympathize with others, often over aforementioned shared struggles Another common use of memes is projecting values out into the world. This also covers a wide variety of topics, with two very different examples being Spotify Wrapped and Black Lives Matter. </span></p><p><span>	</span><span>First, we&#39;ll address Spotify Wrapped</span><sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup><span>. Annually at the end of the year, Spotify releases some statistics about your individual listening habits. Usually this includes how many minutes you listened to Spotify that year and what your top artists and genres were, among other statistics. At the end of the report, they provide succinct graphics designed for social media. Consequently, this leads to a flood of people sharing their Wrapped statistics. More often than not, people share it to find others that share their favorite artists or genres. They want to showcase their own statistics, their own </span><em><span>values</span></em><span>. People are more interested in projecting their values into the world, rather than looking for people to sympathize with them. This is a pretty simple, self-obsessed example though. A far more interesting example is that of</span><a href='https://en.wikipedia.org/wiki/Internet_activism'><span> internet activism</span></a><span>.</span></p><h4 id='internet-activism'><span>Internet Activism </span></h4><p><span>	</span><span>In &quot;Born to Shop? Consumer History and American History,&quot; Glickman</span><sup class='md-footnote'><a href='#dfref-footnote-10' name='ref-footnote-10'>10</a></sup><span> covers the history of American consumer culture, and how the rise in boycotts lead to much of activism happening through consumer choices. One example is the notorious grape boycotts when &quot;agricultural workers urged middle-class consumers to refrain from purchasing grapes, so long as growers resisted union organizing campaigns and industry conditions remained dangerous&quot; (6). Today, activism through consumer consumer culture is more present than ever thanks to internet activism. However, it is no longer dependent on direct consumer choices, but rather social ones: which memes you share. Internet activism takes on a lot of different forms, but the most common, and most easily recognizable as memes, are short infographics and hashtags. Although they are ever present nowadays, they surged in popularity the summer of 2020 particularly with the Black Lives Matter movement and protests. Terry Nguyen with Vox</span><sup class='md-footnote'><a href='#dfref-footnote-11' name='ref-footnote-11'>11</a></sup><span> described these activism-focused infographic memes as &quot;PowerPoint activism.&quot; Some of the graphics they share can be seen here, and immediately you will notice the interesting use of eye-catching design and unique aethstetics.</span></p><center><div height="100%">
+<iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CBno6H2pEox/embed/?cr=1&amp;v=12&amp;wp=726&amp;rd=https%3A%2F%2Fwww.vox.com&amp;rp=%2Fthe-goods%2F21359098%2Fsocial-justice-slideshows-instagram-activism#%7B%22ci%22%3A0%2C%22os%22%3A1445.670000044629%2C%22ls%22%3A1236.269999993965%2C%22le%22%3A1238.6100001167506%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="540" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: white; max-width: 658px; width: calc(30% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;" align="left"></iframe><iframe class="instagram-media instagram-media-rendered" id="instagram-embed-2" src="https://www.instagram.com/p/CDL1waEnkGP/embed/?cr=1&amp;v=12&amp;wp=1316&amp;rd=https%3A%2F%2Fwww.vox.com&amp;rp=%2Fthe-goods%2F21359098%2Fsocial-justice-slideshows-instagram-activism#%7B%22ci%22%3A2%2C%22os%22%3A1086.2900000065565%2C%22ls%22%3A873.5750000923872%2C%22le%22%3A875.2000001259148%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="540" data-instgrm-payload-id="instagram-media-payload-2" scrolling="no" style="background: white; max-width: 658px; width: calc(30% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;" align="right"></iframe></div></center><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p><span>While most people primarily use these types of posts to share values they find important, that&#39;s not always the case. #BlackoutTuesday took place on June 2, 2020, which was initially meant as a protest against racism and police brutality in response to the killings of George Floyd, Ahmaud Arbery, and Breonna Taylor. Many users on Facebook and instagram took part by posting a black square usually accompanied by either #BlackoutTuesday, #BlackLivesMatter, or #BLM.</span></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Solid_black.svg/1280px-Solid_black.svg.png" alt="img" style="zoom: 20%;" /></p><p><span>While many people meant this sincerely, there was concern that this action was merely performative as compared to participating in the protests or donating to the cause. This is also an example of virtue signalling (which itself deserves an entire essay), where someone shares memes to “signal” that they share some set of values Activism, closely related to altruism, runs contrary to the belief &quot;that evolution ultimately proceeds for the good of the individual&quot; and yet is very present in our society as we&#39;ve seen (Blackmore 147). But this could also help explain why many acts of internet activism are labelled as virtue signalling: because virtue signalling is a selfish act that would explain the selfless act of activism/altruism.</span></p><p><span>	</span><span>The posts that aren&#39;t performative activism still have their own issues though. These types of aethstetic designs are really popular on Instagram, and are often shared widely. Sometimes far more than expected, as Nguyen reports &quot;a popular mini-guide on using</span><a href='https://www.instagram.com/p/CDFLe7PHPfK/'><span> trans-inclusive language</span></a><span> with over 43,000 ‘likes’ was created by a user with only 1,200 followers.&quot; While many of these accounts and posts are sincerely trying to spread awareness, it has spread beyond that. Nguyen goes on to explain that &quot;the problem is, the format of the mini slideshow has become so ubiquitous that independent creators are using them as a creative outlet, a political megaphone, or a means to build their brand.&quot; This particular style has become a meme of itself, mutating from genuinely trying to gain attention for political or humanitarian causes to using it to promote one&#39;s own work. Nguyen brings up the streetwear brand CHNGE, and explains</span></p><blockquote><p><span>Its Instagram page emulates that of a progressive advocacy organization, with posts on allyship, police defunding,</span><a href='https://www.instagram.com/p/CDWbqKqgEY8/'><span> climate change</span></a><span>, and</span><a href='https://www.instagram.com/p/CDff2g5gEnk/'><span> international issues</span></a><span>. And while the brand only appears to be selling social justice-adjacent, Black Lives Matter apparel for donations to the movement, it’s a telling sign of the steady corporatization of progressive politics</span></p></blockquote><p><span>What was originally a meme meant to allow people to actively share their values on important causes, warped into a meme for promoting people&#39;s own business.</span></p><h4 id='the-separation-of-values-from-products'><span>The Separation of Values From Products</span></h4><p><span>	</span><span>Goodman-Cohen&#39;s &quot;The Contradictions of Consumer Culture&quot;</span><sup class='md-footnote'><a href='#dfref-footnote-12' name='ref-footnote-12'>12</a></sup><span> discusses the change of consumer culture from strictly physical goods to more and more about social ideas. The social meaning of products became increasingly important through the 20th century. Which car you drove, clothes you wore, foods you ate, art you appreciated, and much more all had serious implications with your social status. For example, in &quot;Can &#39;Taste&#39; Be Separated from Social Class?&quot;</span><sup class='md-footnote'><a href='#dfref-footnote-13' name='ref-footnote-13'>13</a></sup><span> Finn describes how &quot;poorer people tended to prefer &#39;lowbrow&#39; things, middle class people liked &#39;middlebrow&#39; things, and rich people liked &#39;highbrow&#39; things&quot; (87). Although Finn was focused on food, this holds true for many areas of life. Your social identity was primarily a manifestation of your consumer choices. Goodman and Cohen also outline four stages of economic consumption with the fourth and last being the consumer acting &quot;as a so­cial agent involved in complex ways with fashion trends, social competition, and emulation&quot; (29). Consumer and social choices were one in the same, what you purchase defines your social status, and vice versa. That being said, I think we&#39;re entering a fifth stage of consumption, one where your social status isn&#39;t coupled to your consumer choices, but rather one where the social act of sharing cultural values through memes influence both your social status and your consumption separately.</span></p><p><span>	</span><span>Goodman and Cohen said that &quot;only consumers are in touch with the never-entirely rational social processes that are at the center of our economic system.&quot; I think this still completely holds true, but it’s now the social process of exchanging memes, not the social practice of consuming, that drives our economic system. Your social status is often determined to some degree by what memes, and thus cultural values, you share. This is one reason that virtue signalling has become so important over the past few years; people feel pressured to share certain memes that they might not believe in, in order to fit into a certain social class. What memes people see also impacts their consumption habits, but it&#39;s the memes and not the consumption itself that affects people&#39;s social class.</span></p><h2 id='capitalist-meme-consumption'><span>Capitalist Meme Consumption</span></h2><p><span>	</span><span>Although I argue that consumption no longer drives social class or sharing cultural values, it is still driven by them and more so than ever. Despite many values being exchanged without the need to purchase items, this doesn&#39;t mean we&#39;re buying fewer things. There are countless examples of memes driving consumption. Some notable ones include @Doggface280&#39;s rendition of Fleetwood Mac&#39;s &quot;Dreams&quot;</span><sup class='md-footnote'><a href='#dfref-footnote-14' name='ref-footnote-14'>14</a></sup><span>, Dogecoin</span><sup class='md-footnote'><a href='#dfref-footnote-15' name='ref-footnote-15'>15</a></sup><span>, and the return of Szechuan sauce</span><sup class='md-footnote'><a href='#dfref-footnote-16' name='ref-footnote-16'>16</a></sup><span> at McDonalds thanks to a popular episode of</span><a href='https://en.wikipedia.org/wiki/Rick_and_Morty'><span> Rick and Morty</span></a><span>. Doggface280&#39;s TikTok, which gained over 80 million views on TikTok alone, caused stores all across the country to completely sell out of cranberry juice and caused the 1977 song to reenter the Billboard Top 10. Dogecoin, a cryptocurrency based on the Doge meme mentioned earlier, was created as a joke to begin with, but currently has a market capitalization of around </span><span>$</span><span>70 Billion dollars making it roughly equal in value to Capital One, one of America&#39;s biggest banks. </span></p><p><em><span>Let me repeat that</span></em><span>, a digital currency created as a meme, is </span><strong><span>worth more</span></strong><span> than one of the largest banks in America (and thus the world)! </span></p><p><span>	</span><span>There has been a recent rise in popularity of NFTs, an abbreviation for Non-Fungible Tokens which are a way of attaching digital assets like images, audio, or video to cryptocurrency. These NFTs also provided an outlet for people to outright purchase the rights to original memes. For example, a Nyan Can</span><sup class='md-footnote'><a href='#dfref-footnote-17' name='ref-footnote-17'>17</a></sup><span> NFT sold for 300 ETH (another cryptocurrency), which at the time was worth nearly </span><span>$</span><span>600,000 USD and is now worth nearly </span><span>$</span><span>1,000,000 USD. The Disaster Girl</span><sup class='md-footnote'><a href='#dfref-footnote-18' name='ref-footnote-18'>18</a></sup><span> meme was also sold as an NFT for 180 ETH. Because of copying nature of memes, it has historically been difficult to reap any benifit from a viral meme if it doesn&#39;t promote your own product or business, but NFTs allow people to have much better ownership over their memes, and thus the ability to sell them.</span></p><p><span>	</span><span>In addition to being bought and sold either as a cryptocurrency like Dogecoin, or as NFTs, memes are more often used as a form of marketing. The type and goal of marketing can vary wildly though. There are two classes of product focused memes, the first being &#39;naturally occurring&#39; memes, and the second being &#39;corporate&#39; memes. &#39;Naturally occurring&#39; memes are simply made by everyday people and might feature a particular product for the sake of the joke. Some examples include airpod memes, particularly people getting them for Christmas,</span><sup class='md-footnote'><a href='#dfref-footnote-19' name='ref-footnote-19'>19</a></sup><span> and Oreo grammar memes.</span><sup class='md-footnote'><a href='#dfref-footnote-20' name='ref-footnote-20'>20</a></sup><span> These weren&#39;t created by the companies that they promote, and yet they are fantastic free marketing for them. &#39;Corporate&#39; memes on the other hand, are created by companies specifically to market their products. Netflix notoriously makes and shares their own memes regarding their shows, and they are often well received despite a bias against corporate memes. Here is a recent Netflix meme regarding one of their current original shows:</span></p><blockquote class="twitter-tweet" max-width="40%" text-align="center" width="auto" display="table" float="center"><p lang="en" dir="ltr">Woman in the Window has Amy Adams playing a character who hasn’t left her house in 10 months and it’s far too relatable after the last year <a href="https://t.co/EFQ7ASuEvB">pic.twitter.com/EFQ7ASuEvB</a></p>— Netflix (@netflix) <a href="https://twitter.com/netflix/status/1393265163902492674?ref_src=twsrc%5Etfw">May 14, 2021</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p><span>Netflix also allows for users to screenshot their shows so that they will create and share their own memes about Netflix&#39;s content. Not all corporate memes are as successful as Netflix&#39;s though. Corporate memes already have a bias against them because they often feel “forced”, which certainly limits their capacity to go viral. This McDonalds meme for example completely disregards the format of the meme its trying to co-opt, the Say No More Fam meme.</span><sup class='md-footnote'><a href='#dfref-footnote-21' name='ref-footnote-21'>21</a></sup><span> (The McDonalds meme is over 2 years older than the Netflix one, which explains why it has more likes despite certainly being less well-received).</span></p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Him: Meet me at McDonald's?<br>Barber: Say no more, fam. <a href="https://t.co/Up7lkDqwPq">pic.twitter.com/Up7lkDqwPq</a></p>— McDonald's UK (@McDonaldsUK) <a href="https://twitter.com/McDonaldsUK/status/966643448689328129?ref_src=twsrc%5Etfw">February 22, 2018</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p><span>Some memes are also specifically meant to criticize a company or the government. These are often akin to a modern take on a political comic. Often they will take one of the company&#39;s products, or a company policy, or even endorsement they have made, and be sarcastic about the idea. This meme about corporate bailouts exemplifies this well:</span></p><p><img src="https://static.boredpanda.com/blog/wp-content/uploads/2020/03/corporates-being-jerks-corona-memes-104-5e82fcf08f253__700.jpg" alt="Pretty Much" style="zoom:50%;" /></p><p><span>This particular meme highlights the hypocritical nature of many large corporations which always incentivize their own profits and try to use every loop-hole to avoid paying taxes, but when they need help they look to the government (and thus taxpayers) to bail them out. Memes like this are also quite popular because of the populist nature of both memes generally and the content, people far out number large corporations, and have more of an ability to spread the meme around. This populist nature is what gives memes their dominant marketing power, and why they play such an important role in how people interact with companies and products today.</span></p><p><span>	</span><span>Glickman further describes in &quot;Born to Shop?&quot; how we &quot;[scorn] companies that produce goods with cheap labor abroad and sweat shop labor at home, [and] many critics have been led to call for a revival of consumer responsibility&quot; (7). As consumers, we historically have often spread our ideas and values through the products we buy. And that when we consume products, we&#39;re not also consuming the ideas and values associated with them. Now, these are more separated. We consume, to some degree, ideas and values associated with products without having to purchase the products themselves. We are free to share many of the associated memes without having to consume the product personally. This also means that calls for consumer responsibility are in everyone&#39;s hands now, not just the critics as Glickman said.</span></p><h2 id='conclusion'><span>Conclusion</span></h2><p><span>	</span><span>Memes are changing the way we interact. From how teens interact with friends and deal with emotionally heavy topics, to how activists push their message, to which companies to support and which products to buy, memes make it easier than ever to share what cultural values we hold most dear. We also are no longer as dependent on having to use our consumer choices as an intermediary for sharing those values or in order to fit into a specific social class. And yet, the influence of memes means that we are still consuming more than ever before.</span></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <a href="https://knowyourmeme.com/memes/rickroll"><img src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif"></img></a> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <a href="https://knowyourmeme.com/memes/doge"><img src="https://i.kym-cdn.com/photos/images/newsfeed/000/581/722/7bc.jpg" alt="ow so scare you doing Concern keep ur hands ay from me Shiba Inu dog dog like mammal dog breed dog breed group shiba inu" style="zoom:67%;" /></a> <a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <a href='https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118766804.wbiect026'><span>Wiley Communications Encyclopedia: Meme</span></a> <a name='dfref-footnote-3' href='#ref-footnote-3' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> <a href='https://en.wikipedia.org/wiki/Susan_Blackmore'><span>Blackmore, Susan J.</span></a><span> (1999), </span><em><span>The meme machine</span></em><span>, Oxford [Oxfordshire]: Oxford University Press, p. 288, </span><a href='https://en.wikipedia.org/wiki/ISBN_(identifier)'><span>ISBN</span></a><span> </span><a href='https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-850365-1'><span>978-0-19-850365-1</span></a> <a name='dfref-footnote-4' href='#ref-footnote-4' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> <span>The &#39;fire&#39; memes are distinct from the phrase &#39;fire memes&#39; which is itself a meme</span> <a name='dfref-footnote-5' href='#ref-footnote-5' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> <a href='https://www.nytimes.com/2020/02/06/well/family/memes-teens-coronavirus-wwiii-parents.html'><span>NYTimes: The Role of Memes in Teen Culture</span></a> <a name='dfref-footnote-6' href='#ref-footnote-6' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>7</span> <span>Arlie Russell Hochschild, 1983. </span><em><span>The Managed Heart: Commercialization of Human Feeling</span></em><span>.</span> <a name='dfref-footnote-7' href='#ref-footnote-7' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>8</span> <a href='https://www.pewresearch.org/fact-tank/2019/07/12/a-growing-number-of-american-teenagers-particularly-girls-are-facing-depression/'><span>Pew Research on Teenage Depression</span></a> <a name='dfref-footnote-8' href='#ref-footnote-8' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>9</span> <img src="https://techcrunch.com/wp-content/uploads/2020/12/Summary-share-cards.png?w=730&crop=1" alt="Spotify launches '2020 Wrapped' with new features including quizzes, badges  and, yes, stories | TechCrunch" style="zoom:50%;" /> <a name='dfref-footnote-9' href='#ref-footnote-9' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>10</span> <span>Lawrence Glickman, 1999. “Born to Shop? Consumer History and American History,” </span><em><span>Consumer Society in American History</span></em> <a name='dfref-footnote-10' href='#ref-footnote-10' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>11</span> <a href='https://www.vox.com/the-goods/21359098/social-justice-slideshows-instagram-activism'><span>Part of Vox&#39;s &quot;The Goods&quot; publication focused on consumer culture.</span></a> <a name='dfref-footnote-11' href='#ref-footnote-11' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>12</span> <span>Douglas Goodman and Mirelle Cohen, 2004. “Consumer Culture and Its Contradictions,” </span><em><span>Consumer Culture: A Reference Handbook</span></em> <a name='dfref-footnote-12' href='#ref-footnote-12' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>13</span> <span>Margot Finn, 2019. “Choosing Food: Can &#39;Taste&#39; Be Separated from Social Class?,” </span><em><span>Food Fights: How History Matters to Contemporary Food Debates</span></em> <a name='dfref-footnote-13' href='#ref-footnote-13' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>14</span> <a href="https://knowyourmeme.com/memes/people/doggface208"><img src="/Users/eliaslittle/Downloads/2a0bdb75b9b0ede5917011b1439b9bf1.gif" referrerpolicy="no-referrer" alt="2a0bdb75b9b0ede5917011b1439b9bf1"></a> <a name='dfref-footnote-14' href='#ref-footnote-14' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>15</span> <a href="https://knowyourmeme.com/memes/dogecoin"><img src="https://i.kym-cdn.com/entries/icons/original/000/014/710/dodge-coin-649x365.jpg" alt="Dogecoin with a picture of Doge" style="zoom:50%;" /></a> <a name='dfref-footnote-15' href='#ref-footnote-15' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>16</span> <a href ="https://knowyourmeme.com/memes/mcdonalds-mulan-szechuan-sauce"><img src="https://i.kym-cdn.com/entries/icons/original/000/022/604/rickmort.jpg" alt="McDonald's Mulan Szechuan Sauce" style="zoom:20%;" /></a> <a name='dfref-footnote-16' href='#ref-footnote-16' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>17</span> <a href="https://knowyourmeme.com/memes/nyan-cat"><img src="https://media0.giphy.com/media/sIIhZliB2McAo/giphy.gif?cid=ecf05e47xkx6ly7ahte4qumaud4ibgnqte68ihgu7kugwgye&amp;rid=giphy.gif&amp;ct=g" referrerpolicy="no-referrer" alt="Nyan Cat GIF"></a> <a name='dfref-footnote-17' href='#ref-footnote-17' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>18</span> <a href="https://knowyourmeme.com/memes/disaster-girl"><img src="https://static01.nyt.com/images/2021/04/30/multimedia/30xp-meme/29xp-meme-articleLarge-v3.jpg?quality=75&auto=webp&disable=upscale" alt="&ldquo;Disaster Girl&rdquo;" style="zoom:50%;" /></a> <a name='dfref-footnote-18' href='#ref-footnote-18' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>19</span> <img src="https://ppcprotect.com/static/d127cdd322f40ef7b96c97776071a17e/88df8/airpod-meme.jpg" alt="airpod marketing meme" style="zoom:40%;" /> <a name='dfref-footnote-19' href='#ref-footnote-19' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>20</span> <img src="https://i.kym-cdn.com/entries/icons/original/000/033/708/cover4.jpg" alt="Oreo cookie grammar where the cookie part is represented by &quot;o&quot; and the cream filling is represented by &quot;re&quot;" style="zoom:50%;" /> <a name='dfref-footnote-20' href='#ref-footnote-20' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>21</span> <img src="https://i.kym-cdn.com/photos/images/newsfeed/000/920/786/f8e.jpg" alt="Barber: &quot;what do you want?&quot; Him: &quot;ahh give me that Squilliam Fancyson. Barber: &quot;say no more fam.&quot; G. BarberMemes face facial expression nose text forehead chin head cheek human behavior jaw" style="zoom:50%;" /> <a name='dfref-footnote-21' href='#ref-footnote-21' title='back to document' class='reversefootnote' >↩</a></div></div></div></div>
+</body>
+</html>
