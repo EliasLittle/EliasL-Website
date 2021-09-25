@@ -7,11 +7,18 @@
         "body" : "I am a full-time undergaduate student at Cornell University. I am majoring in Operations Research with double minors in Computer Science and Applied Math."
     },
     {
-        "title" : "Cornell Hyperloop",
+        "title" : "Cornell Data Science",
         "subtitle" : "An Engineering Project Team at Cornell.",
-        "logo" : "https://hyperloop.cornell.edu/images/logo_symbol.png",
-        "link" : "https://hyperloop.cornell.edu/",
-        "body" : "I am a member of the Propulsion subteam."
+        "logo" : "https://images.squarespace-cdn.com/content/v1/59ec1dc7268b9699fe3a82ce/1513186347267-H13W82BXHFWJI1DE8T6W/venn.png?format=1500w",
+        "link" : "https://cornelldata.science",
+        "body" : "I am a member of the Intelligent Systems subteam."
+    },
+    {
+        "title" : "Cornell Ukulele Club",
+        "subtitle" : "Teach and Play Ukulele",
+        "logo" : " ",
+        "link" : " ",
+        "body" : "Meetup weekly to teach how to play Ukulele, and play with others. Help run the club as VP."
     },
     {
         "title" : "Anything Goes",
