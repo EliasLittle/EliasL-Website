@@ -1,9 +1,13 @@
+<template>
+</template>
 <script>
-  export default {
+import links from "~/assets/json/links.json";
+console.log(links['youtube']);
+export default {
 
-    mounted() {
-      window.location.href = "https://drive.google.com";
-    },
+  mounted() {
+    window.location.href = "https://drive.google.com";
+  },
 
-  };
+};
 </script>
