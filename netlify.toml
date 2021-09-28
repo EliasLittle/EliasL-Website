@@ -1,0 +1,6 @@
+[[redirects]]
+	from = "/maps"
+	to = "https://maps.google.com"
+[[redirects]]
+	from = "test/keep"
+	to = "https://keep.google.com"
