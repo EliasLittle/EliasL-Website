@@ -3,6 +3,7 @@ import colors from 'vuetify/es5/util/colors';
 export default {
   
   mode: 'universal',
+  target: 'static',
   /*
    ** Headers of the page
    */
