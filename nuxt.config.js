@@ -27,9 +27,8 @@ export default {
     routes: [
       {
         path: "/test/drive",
-        component: "",
         beforeEnter(to, from, next) {
-          window.location.href = "https://drive.google.com";
+          window.location.replace = "https://drive.google.com";
         }
       }
     ]
