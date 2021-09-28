@@ -5,8 +5,8 @@
 
 export default {
 
-  created() {
-    window.location.href = "https://drive.google.com";
+  mounted() {
+    window.location.replace = "https://drive.google.com";
   },
 
 };
