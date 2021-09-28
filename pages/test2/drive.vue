@@ -6,7 +6,7 @@
 export default {
 
   mounted() {
-    window.location.href = "https://drive.google.com";
+    this.$router.push('https://drive.google.com') 
   },
 
 };
