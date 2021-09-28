@@ -25,12 +25,12 @@ export default {
   */
   generate: {
     routes: [
-      /*{
-        path: "/test/drive",
-        beforeEnter(to, from, next) {
-          window.location.replace = "https://drive.google.com";
+      {
+        path: "/test2/drive",
+        mounted() {
+          window.location.href = "https://drive.google.com";
         }
-      }*/
+      }
     ]
   },
   /*
