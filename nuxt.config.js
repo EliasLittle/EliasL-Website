@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors';
+import links from './content/links.json';
 
 export default {
   
@@ -25,8 +26,7 @@ export default {
 
   */
   generate: {
-    routes: [
-    ]
+    routes: Object.keys(links),
   },
   /*
    ** Customize the progress-bar color
