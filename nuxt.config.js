@@ -24,7 +24,15 @@ export default {
 
   */
   generate: {
-    routes: []
+    routes: [
+      {
+        path: "/test/drive",
+        component: "",
+        beforeEnter(to, from, next) {
+          window.location.href = "https://drive.google.com";
+        }
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
