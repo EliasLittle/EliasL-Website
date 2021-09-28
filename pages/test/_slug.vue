@@ -1,6 +1,7 @@
 <template>
   <p>Hello, World! I'm testing here...</p>
-  <p>{{this.slug}}</p>
+  <p>{{ this.id }}</p>
+  <p>{{ this.lnk }}</p>
 </template>
 <script>
 //import links from '~/assets/json/links.json';
@@ -13,11 +14,13 @@ export default {
     }
   },*/
 
-  async asyncData({ params }) {
-      const slug = params.slug // When calling /abc the slug will be "abc"
+  async asyncData({$content, params }) {
+      const lnks = await.$content('links.json').fetch();
+      const id = params.slug; // When calling /abc the slug will be "abc
+      const lnk = lnks[id];
       //console.log("Slug: ", slug)
       //console.log("Link?: ", links[slug])
-      return { slug }
+      return { id, lnk };
   },
   
   /*mounted() {
