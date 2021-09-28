@@ -15,7 +15,7 @@ export default {
   },*/
 
   async asyncData({$content, params }) {
-      const lnks = await.$content('links.json').fetch();
+      const lnks = await $content('links.json').fetch();
       const id = params.slug; // When calling /abc the slug will be "abc
       const lnk = lnks[id];
       //console.log("Slug: ", slug)
