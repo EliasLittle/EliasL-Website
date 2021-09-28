@@ -12,12 +12,11 @@ export default {
     }
   },*/
 
-  async asyncData({$content, params }) {
-      //const lnks = await $content('links.json').fetch();
-      const id = params.slug; // When calling /abc the slug will be "abc
-      const lnk = links[id];
-      //console.log("Slug: ", slug)
-      //console.log("Link?: ", links[slug])
+  async asyncData({ params }) {
+      const id = params.pathMatch; 
+      // pathMatch allows any path over a single slug, 
+      // Thus both cal/school and cal/personal can match to different things
+      const link = (id in links) ? links[id] : "/undefined";
       return { id, link };
   },
   

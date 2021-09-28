@@ -1,5 +1,10 @@
 {
+    "test/youtube": "https://youtube.com",
     "youtube": "https://youtube.com",
     "twitter": "https://twitter.com",
-    "cornell": "https://cornell.edu"
+    "cornell": "https://cornell.edu",
+    "cal": "/test/cal/school",
+    "test/cal": "https://flexibits.com/fantastical",
+    "test/cal/school": "https://calendar.google.com/calendar/?authuser=ejl242@cornell.edu",
+    "test/cal/personal": "https://calendar.google.com/calendar/?authuser=eliasjlittle@gmail.com"
 }
