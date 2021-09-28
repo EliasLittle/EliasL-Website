@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+/test/youtube https://youtube.com
+/cornell https://cornell.edu
+/cal /test/cal/school
+/test/cal/school https://calendar.google.com/calendar/?authuser=ejl242@cornell.edu
