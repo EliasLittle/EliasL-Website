@@ -2,5 +2,8 @@
 	from = "/maps"
 	to = "https://maps.google.com"
 [[redirects]]
-	from = "test/keep"
+	from = "/test/keep"
 	to = "https://keep.google.com"
+[[redirects]]
+	from = "/courseplan"
+	to = "https://airtable.com/shrYDvjZoKaHqIYP9/tblRuQIC79zC9vcMR"
